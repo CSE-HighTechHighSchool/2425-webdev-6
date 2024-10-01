@@ -41,6 +41,10 @@ body::-webkit-scrollbar {
     /*color: #0087ca;*/
   }
   
+.navbar-toggler-icon {
+    background-image: url("img/Hamburger_icon.svg.png");
+}
+
 .hover-underline-animation:after {
     content: '';
     position: absolute;
