@@ -21,15 +21,55 @@ body::-webkit-scrollbar {
     margin-right: 10px;
 }
 
-.navbar-brand img {
-    max-height: 40px; 
-}
 
 .sticky-header {
     position: sticky;
     top: 20px; 
     scroll-margin-top: 20px;
   }
+
+  .navbar-brand {
+    font-weight: bold;
+    color: #FFD700; /* Gold color for text */
+}
+
+.navbar-brand img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: black;
+}
+
+.nav-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.btn-signin {
+    background-color: #FFD700;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-signin:hover {
+    background-color: #FFC107; /* Slight hover effect */
+    color: black;
+}
+
+.btn-login {
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* ----------------- ID CSS ----------------- */
 
@@ -44,6 +84,7 @@ body::-webkit-scrollbar {
 .navbar-toggler-icon {
     background-image: url("img/Hamburger_icon.svg.png");
 }
+
 
 .hover-underline-animation:after {
     content: '';
