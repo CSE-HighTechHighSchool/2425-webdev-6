@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+body {
+    font-family: "Merriweather", serif;
+}
+
 h2 {
     font-family: "Manrope", sans-seri;
     
@@ -13,7 +17,7 @@ h2 {
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .nbMenuItem{               /* navbar link text properties */
     font-size:25px;
@@ -57,4 +61,20 @@ body::-webkit-scrollbar {
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
+}
+
+.text-title {
+    color: gold;
+    font-weight: 400;
+}
+
+.img-aside {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    filter: drop-shadow(2rem 3rem 0.4rem rgba(239, 222, 130, 0.8));
+}
+
+.lead {
+    font-size: 1.5rem;
 }
