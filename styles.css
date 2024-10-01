@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+h2 {
+    font-family: "Manrope", sans-seri;
+    
+} 
+/* ----------------- Class CSS ----------------- */
+
+
+.nb-background-color{   /* navbar background color */
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+.nbMenuItem{               /* navbar link text properties */
+    font-size:25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand img {
+    max-height: 40px; 
+}
+
+.sticky-header {
+    position: sticky;
+    top: 20px; 
+    scroll-margin-top: 20px;
+  }
+
+/* ----------------- ID CSS ----------------- */
+
+/* -----------------Underline Animation CSS -----------------*/
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    /*color: #0087ca;*/
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}
