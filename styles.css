@@ -78,3 +78,49 @@ body::-webkit-scrollbar {
 .lead {
     font-size: 1.5rem;
 }
+
+.bg-blog {
+    background-color: #FFFDE7;
+}
+
+.bg-news {
+    background-color: #FFFACC;
+}
+
+.bg-lessons {
+    background-color: #FFF38C;
+}
+
+.container {
+    height: 100vh;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 2;
+}
+
+.text-direction-end {
+    text-align: end;
+}
+
+.texxt-direction-start {
+    text-align: start;
+}
+
+/* ----------------- Media Query CSS ----------------- */
+@media (max-width: 768px) {
+    .container {
+        height: fit-content;
+        padding: 20px;
+    }
+    .text-direction-end {
+        text-align: center;
+    }
+    .text-direction-start {
+        text-align: center;
+    }
+}
