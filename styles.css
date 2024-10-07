@@ -16,7 +16,9 @@ nav {
 
 
 .nb-background-color{   /* navbar background color */
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #ffd90041;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.102);
 }
 
 body::-webkit-scrollbar {
@@ -66,7 +68,15 @@ body::-webkit-scrollbar {
 }
 
 .btn-login {
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
     font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-login:hover {
+    background-color: #d7d7d74a; /* Slight hover effect */
     color: black;
 }
 
@@ -103,7 +113,7 @@ body::-webkit-scrollbar {
     transition: transform 0.35s ease-out;
 }
   
-.hover-underline-animati    on:hover:after {
+.hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
