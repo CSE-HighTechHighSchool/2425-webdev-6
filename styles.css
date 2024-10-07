@@ -127,7 +127,8 @@ body::-webkit-scrollbar {
     width: 50%;
     height: auto;
     object-fit: cover;
-    filter: drop-shadow(2rem 3rem 0.4rem #EFDE82cc);
+    filter: drop-shadow(1.5rem 2.25rem 0.3rem #EFDE82cc);
+    margin-top: 4rem;
 }
 
 .lead {
