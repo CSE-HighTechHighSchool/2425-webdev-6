@@ -163,8 +163,29 @@ body::-webkit-scrollbar {
     text-align: end;
 }
 
-.texxt-direction-start {
+.text-direction-start {
     text-align: start;
+}
+
+.lesson-bar {
+    background-color: #ffed85;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+}
+
+.lesson-bar > div {
+    display: flex;
+    align-items: center;
+}
+
+.lesson-bar i.bi-arrow-right {
+    margin-left: auto;
 }
 
 /* ----------------- Media Query CSS ----------------- */
