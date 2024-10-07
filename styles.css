@@ -51,10 +51,6 @@ body::-webkit-scrollbar {
     color: black;
 }
 
-.nav-link:hover {
-    color: black;
-    text-decoration: underline;
-}
 
 .btn-signin {
     background-color: #FFD700;
@@ -107,7 +103,7 @@ body::-webkit-scrollbar {
     transition: transform 0.35s ease-out;
 }
   
-.hover-underline-animation:hover:after {
+.hover-underline-animati    on:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
