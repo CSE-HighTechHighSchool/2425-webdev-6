@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    
+    <script src="lessons.js" defer></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
         integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
@@ -67,37 +69,129 @@
     <section class="mb-5">
         <div class="container" style="margin-top: 2rem;">
             <h1 class="display-4" style="margin-bottom: 3rem;">My Courses</h1>
-            <div class="lesson-bar d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-piggy-bank display-3 m-3"></i>
-                    <div>
-                        <h1 class="display-6">Personal Finance</h1>
-                        <p class="mb-0">More Details</p>
+
+            <div class="course-container mb-4">
+                <div class="lesson-bar d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-piggy-bank display-3 m-3"></i>
+                        <div>
+                            <h1 class="display-6">Personal Finance</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <p class="mb-2 more-details">Curriculum</p>
+                        <i class="bi bi-arrow-down display-6 expand-arrow" data-bs-toggle="collapse"
+                            data-bs-target="#personal-finance-curriculum" aria-expanded="false"
+                            aria-controls="personal-finance-curriculum"></i>
                     </div>
                 </div>
-                <i class="bi bi-arrow-right display-6"></i>
+                <div class="collapse" id="personal-finance-curriculum">
+                    <div class="curriculum d-flex flex-column justify-content-center align-items-center">
+                        <h3 style="margin-bottom: 2rem; margin-top: 1rem;">Personal Finance Curriculum</h3>
+                        <div class="d-flex gap-5">
+                            <div class="text-center">
+                                <i class="bi bi-piggy-bank fs-1 mb-2"></i>
+                                <h5>I. Saving Strategies</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-calculator fs-1 mb-2"></i>
+                                <h5>II. Budgeting Basics</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-credit-card fs-1 mb-2"></i>
+                                <h5>III. Understanding Credit</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-graph-up-arrow fs-1 mb-2"></i>
+                                <h5>IV. Investment Fundamentals</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="lesson-bar d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-house-gear display-3 m-3"></i>
-                    <div>
-                        <h1 class="display-6">Microeconomics</h1>
-                        <p class="mb-0">More Details</p>
+            
+
+            <div class="course-container mb-4">
+                <div class="lesson-bar d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-house-gear display-3 m-3"></i>
+                        <div>
+                            <h1 class="display-6">Microeconomics</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <p class="mb-2 more-details">Curriculum</p>
+                        <i class="bi bi-arrow-down display-6 expand-arrow" data-bs-toggle="collapse"
+                            data-bs-target="#microeconomics-curriculum" aria-expanded="false"
+                            aria-controls="microeconomics-curriculum"></i>
                     </div>
                 </div>
-                <i class="bi bi-arrow-right display-6"></i>
+                <div class="collapse" id="microeconomics-curriculum">
+                    <div class="curriculum d-flex flex-column justify-content-center align-items-center">
+                        <h3 style="margin-bottom: 2rem; margin-top: 1rem;">Microeconomics Curriculum</h3>
+                        <div class="d-flex gap-5">
+                            <div class="text-center">
+                                <i class="bi bi-graph-up fs-1 mb-2"></i>
+                                <h5>I. Supply and Demand</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-building fs-1 mb-2"></i>
+                                <h5>II. Market Structures</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-person fs-1 mb-2"></i>
+                                <h5>III. Consumer Theory</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-gear fs-1 mb-2"></i>
+                                <h5>IV. Production and Costs</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="lesson-bar d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-bank display-3 m-3"></i>
-                    <div>
-                        <h1 class="display-6">Macroeconomics</h1>
-                        <p class="mb-0">More Details</p>
+
+            <div class="course-container mb-4">
+                <div class="lesson-bar d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-bank display-3 m-3"></i>
+                        <div>
+                            <h1 class="display-6">Macroeconomics</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <p class="mb-2 more-details">Curriculum</p>
+                        <i class="bi bi-arrow-down display-6 expand-arrow" data-bs-toggle="collapse"
+                            data-bs-target="#macroeconomics-curriculum" aria-expanded="false"
+                            aria-controls="macroeconomics-curriculum"></i>
                     </div>
                 </div>
-                <i class="bi bi-arrow-right display-6"></i>
+                <div class="collapse" id="macroeconomics-curriculum">
+                    <div class="curriculum d-flex flex-column justify-content-center align-items-center">
+                        <h3 style="margin-bottom: 2rem; margin-top: 1rem;">Macroeconomics Curriculum</h3>
+                        <div class="d-flex gap-5">
+                            <div class="text-center">
+                                <i class="bi bi-bar-chart fs-1 mb-2"></i>
+                                <h5>I. GDP and Economic Growth</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-cash-coin fs-1 mb-2"></i>
+                                <h5>II. Inflation and Monetary Policy</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-bank2 fs-1 mb-2"></i>
+                                <h5>III. Fiscal Policy</h5>
+                            </div>
+                            <div class="text-center">
+                                <i class="bi bi-globe fs-1 mb-2"></i>
+                                <h5>IV. International Trade</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </body>
+
 </html>

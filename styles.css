@@ -6,14 +6,13 @@ body {
 
 h2 {
     font-family: "Manrope", sans-seri;
-    
+
 }
 nav {
     font-family: "Manrope", sans-seri;  
 }
 
 /* ----------------- Class CSS ----------------- */
-
 
 .nb-background-color{   /* navbar background color */
     background-color: #ffd90041;
@@ -30,7 +29,6 @@ body::-webkit-scrollbar {
     margin-left: 10px;
     margin-right: 10px;
 }
-
 
 .sticky-header {
     position: sticky;
@@ -52,7 +50,6 @@ body::-webkit-scrollbar {
     font-weight: bold;
     color: black;
 }
-
 
 .btn-signin {
     background-color: #FFD700;
@@ -92,13 +89,12 @@ body::-webkit-scrollbar {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    /*color: #0087ca;*/
+    color: #0087ca;
   }
-  
+
 .navbar-toggler-icon {
     background-image: url("img/Hamburger_icon.svg.png");
 }
-
 
 .hover-underline-animation:after {
     content: '';
@@ -109,13 +105,13 @@ body::-webkit-scrollbar {
     bottom: 0;
     left: 0;
     background-color: #000000;
-    /*transform-origin: bottom right;*/
+    transform-origin: bottom right;
     transition: transform 0.35s ease-out;
 }
-  
+
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
-    /*transform-origin: bottom left;*/
+    transform-origin: bottom left;
 }
 
 .text-title {
@@ -177,16 +173,32 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+    transition: border-radius 0.3s ease;
 }
 
-.lesson-bar > div {
-    display: flex;
-    align-items: center;
+.curriculum {
+    background-color: #fff9c4;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: -1rem;
+    padding: 2rem 4rem 2rem 4rem;
 }
 
-.lesson-bar i.bi-arrow-right {
-    margin-left: auto;
+.lesson-bar.expanded {
+    border-radius: 2rem 2rem 0rem 0rem;
 }
+.more-details {
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 0rem 0rem 2rem 2rem;
+}
+.bi-arrow-down {
+    transition: transform 0.3s ease;
+}
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+
 
 /* ----------------- Media Query CSS ----------------- */
 @media (max-width: 768px) {
