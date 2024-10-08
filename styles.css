@@ -45,7 +45,6 @@ body::-webkit-scrollbar {
 
 .navbar-brand img {
     width: 30px;
-    margin-right: 10px;
 }
 
 .navbar-nav .nav-link {
@@ -167,7 +166,7 @@ body::-webkit-scrollbar {
 }
 
 /* ----------------- Media Query CSS ----------------- */
-@media (max-width: 768px) {
+@media (max-width: 540px) {
     .container-heroes {
         height: fit-content;
         padding: 20px;
