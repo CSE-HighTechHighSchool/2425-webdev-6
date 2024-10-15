@@ -21,13 +21,6 @@ nav {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.102);
 }
 
-.inside-box{
-    background-color: #ddd8ab;
-}
-
-.inside-box:hover{
-    background-color: #c8c49c;
-}
 
 .background-color-box{   /* navbar background color */
     background-color: #f0ebbc;
@@ -85,6 +78,54 @@ body::-webkit-scrollbar {
     font-weight: bold;
     margin-right: 10px;
 }
+
+/* Scroll container */
+.scroll-container {
+    height: 500px;
+    overflow-y: hidden; /* Prevents the main container from scrolling */
+    padding: 0;
+    position: relative;
+}
+
+/* Scroll wrapper */
+.scroll-wrapper {
+    height: 100%;
+    overflow-y: scroll; /* This div is the one that will actually scroll */
+    padding-top: 2px;  /* Space at the top */
+    padding-bottom: 2px; /* Space at the bottom */
+    box-sizing: border-box; /* Ensures padding is included in the container height */
+}
+
+/* Each box inside the scroll container */
+.inside-box {
+    background-color: #ddd8ab;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin: 15px 0; /* Consistent margin between the boxes */
+}
+
+/* Hover effect */
+.inside-box:hover {
+    background-color: #c8c49c;
+}
+
+/* Image styling */
+.inside-box img {
+    width: 19%;
+    height: 70%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Remove all individual margins */
+.inside-box h4 {
+    margin: 0;
+    padding: 0;
+}
+
 
 .btn-login:hover {
     background-color: #d7d7d74a; /* Slight hover effect */
