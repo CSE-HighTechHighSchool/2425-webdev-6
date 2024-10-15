@@ -4,18 +4,11 @@ body {
     font-family: "Merriweather", serif;
 }
 
-h2 {
-    font-family: "Manrope", sans-seri;
-    
-}
-nav {
-    font-family: "Manrope", sans-seri;  
+h2, nav {
+    font-family: "Manrope", sans-serif;
 }
 
-/* ----------------- Class CSS ----------------- */
-
-
-.nb-background-color{   /* navbar background color */
+.nb-background-color {
     background-color: #ffd90041;
     backdrop-filter: blur(10px);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.102);
@@ -25,40 +18,34 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.nbMenuItem{               /* navbar link text properties */
-    font-size:25px;
+.nbMenuItem {
+    font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
 }
-
 
 .sticky-header {
     position: sticky;
     top: 20px; 
     scroll-margin-top: 20px;
-  }
+}
 
 .navbar-brand {
     font-weight: bold;
-    color: #FFD700; /* Gold color for text */
+    color: #FFD700;
 }
 
 .icon-link-homepage {
     color: gold;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-decoration: none;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .icon-link-homepage:hover {
-    color: gold;
     background-color: lightgoldenrodyellow;
     border-radius: 4rem;
-    transition: background-color 0.3s;
-    
 }
 
 .navbar-brand img {
@@ -71,31 +58,29 @@ body::-webkit-scrollbar {
     color: black;
 }
 
+.btn-signin, .btn-login {
+    border-radius: 20px;
+    font-weight: bold;
+}
 
 .btn-signin {
     background-color: #FFD700;
     color: black;
-    border-radius: 20px;
-    font-weight: bold;
     margin-right: 10px;
 }
 
 .btn-signin:hover {
-    background-color: #FFC107; /* Slight hover effect */
-    color: black;
+    background-color: #FFC107;
 }
 
 .btn-login {
     background-color: transparent;
     color: black;
-    border-radius: 20px;
-    font-weight: bold;
     margin-right: 10px;
 }
 
 .btn-login:hover {
-    background-color: #d7d7d74a; /* Slight hover effect */
-    color: black;
+    background-color: #d7d7d74a;
 }
 
 .navbar-nav {
@@ -103,20 +88,10 @@ body::-webkit-scrollbar {
     margin-right: auto;
 }
 
-/* ----------------- ID CSS ----------------- */
-
-/* -----------------Underline Animation CSS -----------------*/
-
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    /*color: #0087ca;*/
-  }
-  
-.navbar-toggler-icon {
-    background-image: url("img/Hamburger_icon.svg.png");
 }
-
 
 .hover-underline-animation:after {
     content: '';
@@ -127,20 +102,53 @@ body::-webkit-scrollbar {
     bottom: 0;
     left: 0;
     background-color: #000000;
-    /*transform-origin: bottom right;*/
-    transition: transform 0.35s ease-out;
-}
-  
-.hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    /*transform-origin: bottom left;*/
+    transition: transform 0.45
+    s ease-out;
 }
 
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+}
+.footer{
+    background-color: #FFFACC;
+    color: #DDBD16
+}
 .text-title {
     color: #DDBD16;
     font-weight: 400;
 }
+.about-us {
+    background-color: #FFFACC; /* Yellow-gold background color */
+    color: #333; /* Dark text for readability */
+}
 
+
+.about-us-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .about-us h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+    .about-us p {
+        font-size: 1rem;
+    }
+}
+.about-us {
+    background-color: #FFD700 !important;
+    color: #333;
+}
 .img-aside {
     width: 50%;
     height: auto;
@@ -153,16 +161,8 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
 }
 
-.bg-blog {
-    background-color: #FFFDE7;
-}
-
-.bg-news {
-    background-color: #FFFACC;
-}
-
-.bg-lessons {
-    background-color: #FFF38C;
+.bg-blog, .bg-news, .bg-lessons {
+    background-color: #f6df12;
 }
 
 .container-heroes {
@@ -178,18 +178,14 @@ body::-webkit-scrollbar {
     flex-shrink: 2;
 }
 
-.text-direction-end {
-    text-align: end;
-}
-
-.texxt-direction-start {
+.text-direction-end, .text-direction-start {
     text-align: start;
 }
 
 .img-container {
     width: 100%;
     height: 0;
-    padding-bottom: 100%; /* Creates a square aspect ratio */
+    padding-bottom: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -200,24 +196,47 @@ body::-webkit-scrollbar {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* This ensures the image scales while maintaining aspect ratio */
+    object-fit: contain;
 }
-/* ----------------- Media Query CSS ----------------- */
-@media (max-width: 768px) {
-    .container-heroes {
-        height: fit-content;
-        padding: 4rem;
+
+@media (max-width: 992px) {
+    .img-hero {
+        display: none !important;
     }
-    .text-direction-end {
+    .container-heroes .text-title, .container-heroes .lead {
         text-align: center;
     }
-    .text-direction-start {
+}
+
+@media (max-width: 768px) {
+    .text-direction-end, .text-direction-start {
         text-align: center;
     }
     .img-hero {
         display: none !important;
     }
     .img-container {
-        padding-bottom: 75%; /* Adjust aspect ratio for mobile if needed */
+        padding-bottom: 75%;
+    }
+}
+
+/* Set consistent image size for responsive scaling */
+.responsive-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .responsive-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-image {
+        width: 60px;
+        height: 60px;
     }
 }
