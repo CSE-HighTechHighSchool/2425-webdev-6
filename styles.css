@@ -13,7 +13,7 @@ nav {
 }
 
 .bg-news {
-    background-color: #FFFACC;
+    background-color: #FFFDE7;
     padding: 2rem 0;
 }
 
@@ -31,22 +31,23 @@ nav {
     flex: 1;
     max-height: 500px;
     overflow-y: auto;
-    background-color: #f0ebbc;
+    background-color: #0000000d;
     border-radius: 10px;
     padding: 1rem;
 }
 
+
 .news-item {
     display: flex;
     align-items: center;
-    background-color: #ddd8ab;
+    background-color: #0000000d;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
 
 .news-item:hover {
-    background-color: #c8c49c;
+    background-color: #0000003c;
 }
 
 .news-item img {
@@ -69,13 +70,16 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f0ebbc;
+    background-color: #0000000d;
     border-radius: 10px;
     padding: 2rem 1rem;
     max-width: 500px;
 }
+.featured-news:hover {
+    background-color: #0000003c
+}
 
-.featured-news img {
+.featured-news img {    
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -210,10 +214,6 @@ body::-webkit-scrollbar {
     color: black;
 }
 
-.navbar-nav {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* ----------------- ID CSS ----------------- */
 
@@ -260,17 +260,40 @@ body::-webkit-scrollbar {
     filter: drop-shadow(2rem 3rem 0.4rem #EFDE82cc);
 }
 
+.navbar-brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 1rem;
+}
+
+.navbar-buttons {
+    margin-left: auto;
+}
+
+
+
 .lead {
     font-size: 1.5rem;
 }
 
 .bg-blog {
-    background-color: #FFFDE7;
+    background-color: #FFF7B4;
+    padding: 2rem 0;
 }
 
 
 .bg-lessons {
-    background-color: #FFF38C;
+    background-color: #FFFACC;
+    padding: 2rem 0;
 }
 
 .container-heroes {
@@ -310,5 +333,21 @@ body::-webkit-scrollbar {
 @media (max-width: 768px) {
     .news-container {
         flex-direction: column;
+    }
+}
+/* Make sure the collapse works properly on mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        position: relative;
+        left: 0;
+        transform: none;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .navbar-buttons {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
     }
 }
