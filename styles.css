@@ -13,7 +13,119 @@ h2, nav {
     backdrop-filter: blur(10px);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.102);
 }
+.hero-section {
+    background-color: #FFFACC;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
 
+.text-title {
+    color: #FFD700;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icons {
+    margin-top: 3rem;
+}
+
+.icon-wrapper {
+    background-color: #FFD700;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+
+.icon-link-homepage:hover .icon-wrapper {
+    transform: scale(1.1);
+}
+
+.nj-money-shape {
+    position: relative;
+}
+
+.nj-money-shape::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: rgba(255, 215, 0, 0.2);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: -1;
+}
+
+/* About Us Section Styles */
+.about-us {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.btn-gold {
+    background-color: #FFD700;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.btn-outline-gold {
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.btn-outline-gold:hover {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+.finance-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .nj-money-shape {
+        display: none;
+    }
+    
+    .finance-stats {
+        margin-top: 3rem;
+    }
+}
 body::-webkit-scrollbar {
     display: none;
 }
@@ -117,10 +229,6 @@ body::-webkit-scrollbar {
     color: #DDBD16;
     font-weight: 400;
 }
-.about-us {
-    background-color: #FFFACC; /* Yellow-gold background color */
-    color: #333; /* Dark text for readability */
-}
 
 
 .about-us-image {
@@ -146,7 +254,7 @@ body::-webkit-scrollbar {
     }
 }
 .about-us {
-    background-color: #FFD700 !important;
+    background-color: #FFFACC !important;
     color: #333;
 }
 .img-aside {
@@ -217,6 +325,128 @@ body::-webkit-scrollbar {
     }
     .img-container {
         padding-bottom: 75%;
+    }
+}
+/* Finance Footer Styles */
+.finance-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-gold {
+    color: #FFD700;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #FFD700;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #FFD700;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-gold {
+    background-color: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #FFC107;
+}
+
+.footer-divider {
+    border-color: #FFD700;
+    opacity: 0.5;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.scroll-top {
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+}
+
+/* Money Rain Animation */
+.money-rain {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+.money-rain::before {
+    content: '$';
+    color: rgba(255, 215, 0, 0.3);
+    font-size: 24px;
+    position: absolute;
+    animation: rain 5s linear infinite;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px)) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Generate multiple raindrops */
+@for $i from 1 through 20 {
+    .money-rain::before:nth-child(#{$i}) {
+        left: #{random(100)}%;
+        animation-delay: #{random(5000)}ms;
+        animation-duration: #{4000 + random(3000)}ms;
     }
 }
 
