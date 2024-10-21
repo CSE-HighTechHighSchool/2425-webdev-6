@@ -421,12 +421,11 @@ body::-webkit-scrollbar {
 
 .money-rain::before {
     content: '$';
-    color: rgba(255, 215, 0, 0.3);
-    font-size: 24px;
+    color: rgb(255, 218, 9);
+    font-size: 40px;
     position: absolute;
-    animation: rain 5s linear infinite;
+    animation: rain 4s linear infinite;
 }
-
 @keyframes rain {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -442,11 +441,11 @@ body::-webkit-scrollbar {
 }
 
 /* Generate multiple raindrops */
-@for $i from 1 through 20 {
+@for $i from 1 through 5 {
     .money-rain::before:nth-child(#{$i}) {
         left: #{random(100)}%;
-        animation-delay: #{random(5000)}ms;
-        animation-duration: #{4000 + random(3000)}ms;
+        animation-delay: #{random(300)}ms;
+        animation-duration: #{300 + random(300)}ms;
     }
 }
 
