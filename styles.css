@@ -12,11 +12,6 @@ nav {
     font-family: "Manrope", sans-seri;  
 }
 
-.bg-news {
-    background-color: #FFFDE7;
-    padding: 2rem 0;
-}
-
 .news-container {
     display: flex;
     gap: 2rem;
@@ -285,14 +280,19 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
 }
 
-.bg-blog {
+.bg-econ {
     background-color: #FFF7B4;
     padding: 2rem 0;
 }
 
 
-.bg-lessons {
+.bg-finance {
     background-color: #FFFACC;
+    padding: 2rem 0;
+}
+
+.bg-stock {
+    background-color: #FFFDE7;
     padding: 2rem 0;
 }
 
