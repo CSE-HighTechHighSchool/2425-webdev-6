@@ -5,11 +5,11 @@ body {
 }
 
 h2 {
-    font-family: "Manrope", sans-seri;
+    font-family: "Manrope", sans-serif;
 
 }
 nav {
-    font-family: "Manrope", sans-seri;  
+    font-family: "Manrope", sans-serif;  
 }
 
 /* ----------------- Class CSS ----------------- */
@@ -200,19 +200,18 @@ body::-webkit-scrollbar {
 .rotate-arrow {
     transform: rotate(180deg);
 }
-.blog-post {
-    background-color: #ffed85;
-    border-radius: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 2rem;
-    filter: drop-shadow(0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.1));
-}
+
 .post-title {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
     font-weight: bold;
 }
 .post-date {
     font-size: 0.9rem;
+}
+
+.post-author {
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .post-image {
@@ -223,7 +222,7 @@ body::-webkit-scrollbar {
 .post-category {
     font-size: 0.85rem;
     font-weight: 600;
-    background-color: #ffe23e;
+    background-color: #ffee90;
     padding: 0.25rem 0.25rem;
     border-radius: 0.5rem;
     filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
@@ -234,21 +233,28 @@ body::-webkit-scrollbar {
     color: black;
 }
 .keep-reading-btn {
-    background-color: gold;
-    color: black;
     border: none;
-    padding: 10px 20px;
+    background-color: white;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
 }
-.keep-reading-btn:hover {
-    background-color: rgb(179, 158, 44)
-}
+
 .finance-icon {
     font-size: 1.5rem;
     margin-right: 0.5rem;
+}
+
+.blog-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.blog-section .col-sm-4 {
+    flex: 0 0 auto;
+    width: 80%;
+    margin-right: 20px;
 }
 
 /* ----------------- Media Query CSS ----------------- */
@@ -262,5 +268,14 @@ body::-webkit-scrollbar {
     }
     .text-direction-start {
         text-align: center;
+    }
+    .blog-section .col-sm-4 {
+        width: 33.333333%;
+    }
+}
+
+@media (min-width: 576px) {
+    .blog-section .col-sm-4 {
+        width: 50%;
     }
 }
