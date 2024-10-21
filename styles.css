@@ -12,6 +12,84 @@ nav {
     font-family: "Manrope", sans-seri;  
 }
 
+.bg-news {
+    background-color: #FFFACC;
+    padding: 2rem 0;
+}
+
+.news-container {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.news-list::-webkit-scrollbar {
+    display: none;
+}
+
+.news-list {
+    flex: 1;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #f0ebbc;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    background-color: #ddd8ab;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.news-item:hover {
+    background-color: #c8c49c;
+}
+
+.news-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.news-item h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.featured-news {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0ebbc;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    max-width: 500px;
+}
+
+.featured-news img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.featured-news h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
 /* ----------------- Class CSS ----------------- */
 
 
@@ -190,9 +268,6 @@ body::-webkit-scrollbar {
     background-color: #FFFDE7;
 }
 
-.bg-news {
-    background-color: #FFFACC;
-}
 
 .bg-lessons {
     background-color: #FFF38C;
@@ -229,5 +304,11 @@ body::-webkit-scrollbar {
     }
     .text-direction-start {
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
     }
 }
