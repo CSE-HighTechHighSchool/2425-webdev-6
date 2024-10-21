@@ -12,6 +12,83 @@ nav {
     font-family: "Manrope", sans-serif;  
 }
 
+.news-container {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.news-list::-webkit-scrollbar {
+    display: none;
+}
+
+.news-list {
+    flex: 1;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #0000000d;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+
+.news-item {
+    display: flex;
+    align-items: center;
+    background-color: #0000000d;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.news-item:hover {
+    background-color: #0000003c;
+}
+
+.news-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.news-item h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.featured-news {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #0000000d;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    max-width: 500px;
+}
+.featured-news:hover {
+    background-color: #0000003c
+}
+
+.featured-news img {    
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.featured-news h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
 /* ----------------- Class CSS ----------------- */
 
 .nb-background-color{   /* navbar background color */
@@ -132,6 +209,11 @@ nav {
         margin-top: 3rem;
     }
 }
+
+.background-color-box{   /* navbar background color */
+    background-color: #f0ebbc;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -168,7 +250,6 @@ body::-webkit-scrollbar {
 
 .navbar-brand img {
     width: 30px;
-    margin-right: 10px;
 }
 
 .navbar-nav .nav-link {
@@ -196,6 +277,54 @@ body::-webkit-scrollbar {
     color: black;
     margin-right: 10px;
 }
+
+/* Scroll container */
+.scroll-container {
+    height: 500px;
+    overflow-y: hidden; /* Prevents the main container from scrolling */
+    padding: 0;
+    position: relative;
+}
+
+/* Scroll wrapper */
+.scroll-wrapper {
+    height: 100%;
+    overflow-y: scroll; /* This div is the one that will actually scroll */
+    padding-top: 2px;  /* Space at the top */
+    padding-bottom: 2px; /* Space at the bottom */
+    box-sizing: border-box; /* Ensures padding is included in the container height */
+}
+
+/* Each box inside the scroll container */
+.inside-box {
+    background-color: #ddd8ab;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin: 15px 0; /* Consistent margin between the boxes */
+}
+
+/* Hover effect */
+.inside-box:hover {
+    background-color: #c8c49c;
+}
+
+/* Image styling */
+.inside-box img {
+    width: 19%;
+    height: 70%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Remove all individual margins */
+.inside-box h4 {
+    margin: 0;
+    padding: 0;
+}
+
 
 .btn-login:hover {
     background-color: #d7d7d74a;
@@ -288,12 +417,49 @@ body::-webkit-scrollbar {
     margin-top: 4rem;
 }
 
+.navbar-brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 1rem;
+}
+
+.navbar-buttons {
+    margin-left: auto;
+}
+
+
+
 .lead {
     font-size: 1.5rem;
 }
 
 .bg-blog, .bg-news, .bg-lessons {
     background-color: #f6df12;
+}
+
+.bg-econ {
+    background-color: #FFF7B4;
+    padding: 2rem 0;
+}
+
+
+.bg-finance {
+    background-color: #FFFACC;
+    padding: 2rem 0;
+}
+
+.bg-stock {
+    background-color: #FFFDE7;
+    padding: 2rem 0;
 }
 
 .container-heroes {
@@ -409,8 +575,12 @@ body::-webkit-scrollbar {
 }
 
 /* ----------------- Media Query CSS ----------------- */
-@media (max-width: 768px) {
-    .text-direction-end, .text-direction-start {
+@media (max-width: 540px) {
+    .container-heroes {
+        height: fit-content;
+        padding: 20px;
+    }
+    .text-direction-end {
         text-align: center;
     }
     .img-hero {
@@ -569,5 +739,27 @@ body::-webkit-scrollbar {
 @media (min-width: 576px) {
     .blog-section .col-sm-4 {
         width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+    }
+}
+/* Make sure the collapse works properly on mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        position: relative;
+        left: 0;
+        transform: none;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .navbar-buttons {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
     }
 }
