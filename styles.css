@@ -207,6 +207,12 @@ body::-webkit-scrollbar {
     padding: 0.75rem;
 }
 
+
+
+/* ----------------- ID CSS ----------------- */
+
+/* -----------------Underline Animation CSS -----------------*/
+
 .hover-underline-animation {
     display: inline-block;
     position: relative;
@@ -346,7 +352,61 @@ body::-webkit-scrollbar {
     transform: rotate(180deg);
 }
 
+.post-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.post-date {
+    font-size: 0.9rem;
+}
 
+.post-author {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.post-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #ffee90;
+    padding: 0.25rem 0.25rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+}
+.post-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+}
+.keep-reading-btn {
+    border: none;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.finance-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.blog-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.blog-section .col-sm-4 {
+    flex: 0 0 auto;
+    width: 80%;
+    margin-right: 20px;
+}
 
 /* ----------------- Media Query CSS ----------------- */
 @media (max-width: 768px) {
@@ -500,5 +560,14 @@ body::-webkit-scrollbar {
     .responsive-image {
         width: 60px;
         height: 60px;
+    }
+    .blog-section .col-sm-4 {
+        width: 33.333333%;
+    }
+}
+
+@media (min-width: 576px) {
+    .blog-section .col-sm-4 {
+        width: 50%;
     }
 }
