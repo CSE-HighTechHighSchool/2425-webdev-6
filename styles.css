@@ -442,6 +442,7 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
 }
 
+
 .bg-blog, .bg-news, .bg-lessons {
     background-color: #f6df12;
 }
@@ -568,10 +569,57 @@ body::-webkit-scrollbar {
     -webkit-overflow-scrolling: touch;
 }
 
+/* Blog post card styles */
 .blog-section .col-sm-4 {
     flex: 0 0 auto;
-    width: 80%;
-    margin-right: 20px;
+    min-width: 300px; /* Minimum width for each blog card */
+    max-width: 400px; /* Maximum width for each blog card */
+    margin: 0; /* Remove margin as we're using gap */
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .blog-section .col-sm-4 {
+        min-width: 280px;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-section .col-sm-4 {
+        min-width: 260px;
+        max-width: 320px;
+    }
+    
+    .blog-section {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-section .col-sm-4 {
+        min-width: 240px;
+        max-width: 300px;
+    }
+}
+
+/* Optional: Add smooth scrolling behavior */
+.blog-section {
+    scroll-behavior: smooth;
+}
+
+/* Ensure the content inside each blog post stays contained */
+.blog-section .col-sm-4 > div {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Optional: Add hover effect for better UX */
+.blog-section .col-sm-4:hover {
+    transform: translateY(-5px);
 }
 
 /* ----------------- Media Query CSS ----------------- */
