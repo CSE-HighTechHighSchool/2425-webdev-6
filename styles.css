@@ -978,3 +978,19 @@ body::-webkit-scrollbar {
         left: 18px;
     }
 }
+@media (max-width: 540px) { 
+    .people {
+        
+    }
+}
+/* Media Queries */
+@media (max-width: 540) {
+    .team-member {
+        min-width: 200px;
+    }
+    
+    .img-container {
+        width: 120px;
+        height: 120px;
+    }
+}
