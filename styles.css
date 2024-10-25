@@ -675,9 +675,7 @@ body::-webkit-scrollbar {
     .text-direction-end {
         text-align: center;
     }
-    .img-hero {
-        display: none !important;
-    }
+
     .img-container {
         padding-bottom: 75%;
     }
