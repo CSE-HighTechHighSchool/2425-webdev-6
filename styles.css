@@ -675,10 +675,6 @@ body::-webkit-scrollbar {
     .text-direction-end {
         text-align: center;
     }
-
-    .img-container {
-        padding-bottom: 75%;
-    }
 }
 /* Finance Footer Styles */
 .finance-footer {
@@ -976,13 +972,9 @@ body::-webkit-scrollbar {
         left: 18px;
     }
 }
-@media (max-width: 540px) { 
-    .people {
-        
-    }
-}
+
 /* Media Queries */
-@media (max-width: 540) {
+@media (max-width: 540px) {
     .team-member {
         min-width: 200px;
     }
