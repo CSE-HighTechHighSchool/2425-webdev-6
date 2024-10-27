@@ -233,6 +233,7 @@ body::-webkit-scrollbar {
 .navbar-brand {
     font-weight: bold;
     color: #FFD700;
+    margin-right: 0px;
 }
 
 .icon-link-homepage {
