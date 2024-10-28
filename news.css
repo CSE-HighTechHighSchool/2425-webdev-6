@@ -3,11 +3,6 @@
     gap: 2rem;
 }
 
-
-.news-list::-webkit-scrollbar {
-    display: none;
-}
-
 .news-list {
     flex: 1;
     max-height: 500px;
@@ -15,6 +10,7 @@
     background-color: #0000000d;
     border-radius: 10px;
     padding: 1rem;
+    scrollbar-width: thin;
 }
 
 
@@ -25,10 +21,13 @@
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 1rem;
+    text-decoration: none;
+    color:black;
 }
 
 .news-item:hover {
     background-color: #0000003c;
+    color:black;
 }
 
 .news-item img {
@@ -55,9 +54,13 @@
     border-radius: 10px;
     padding: 2rem 1rem;
     max-width: 500px;
+    color:black;
+    text-decoration: none;
 }
+
 .featured-news:hover {
-    background-color: #0000003c
+    background-color: #0000003c;
+    color: black;
 }
 
 .featured-news img {    

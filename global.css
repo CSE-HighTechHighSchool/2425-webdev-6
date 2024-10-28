@@ -155,20 +155,6 @@ nav {
     margin-top: 20px;
 }
 
-@media (max-width: 992px) {
-    .about-us h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-us h2 {
-        font-size: 1.8rem;
-    }
-    .about-us p {
-        font-size: 1rem;
-    }
-}
 .about-us {
     background-color: #FFFACC !important;
     color: #333;
@@ -186,6 +172,10 @@ nav {
     align-items: center;
 }
 
+.navbar-brand {
+    margin-right: 0;
+}
+
 .navbar-nav {
     position: absolute;
     left: 50%;
@@ -199,8 +189,6 @@ nav {
 .navbar-buttons {
     margin-left: auto;
 }
-
-
 
 .lead {
     font-size: 1.5rem;
@@ -248,16 +236,6 @@ nav {
     text-align: start;
 }
 
-/* ----------------- Media Query CSS ----------------- */
-@media (max-width: 540px) {
-    .container-heroes {
-        height: fit-content;
-        padding: 20px;
-    }
-    .text-direction-end {
-        text-align: center;
-    }
-}
 /* Finance Footer Styles */
 .finance-footer {
     background-color: #1a1a1a;
@@ -387,6 +365,17 @@ nav {
     object-fit: cover;
 }
 
+/* ----------------- Media Query CSS ----------------- */
+@media (max-width: 540px) {
+    .container-heroes {
+        height: fit-content;
+        padding: 20px;
+    }
+    .text-direction-end {
+        text-align: center;
+    }
+}
+
 @media (max-width: 992px) {
     .responsive-image {
         width: 80px;
@@ -421,13 +410,33 @@ nav {
         position: relative;
         left: 0;
         transform: none;
-        text-align: center;
+        text-align: start;
         margin: 1rem 0;
+        padding-left: 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left:0.5rem;
     }
 
     .navbar-buttons {
         display: flex;
         justify-content: center;
         margin: 1rem 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-us h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+    .about-us p {
+        font-size: 1rem;
     }
 }
