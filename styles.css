@@ -233,6 +233,7 @@ body::-webkit-scrollbar {
 .navbar-brand {
     font-weight: bold;
     color: #FFD700;
+    margin-right: 0px;
 }
 
 .icon-link-homepage {
@@ -675,6 +676,12 @@ body::-webkit-scrollbar {
     .text-direction-end {
         text-align: center;
     }
+    .img-hero {
+        display: none !important;
+    }
+    .img-container {
+        padding-bottom: 75%;
+    }
 }
 /* Finance Footer Styles */
 .finance-footer {
@@ -972,9 +979,13 @@ body::-webkit-scrollbar {
         left: 18px;
     }
 }
-
+@media (max-width: 540px) { 
+    .people {
+        
+    }
+}
 /* Media Queries */
-@media (max-width: 540px) {
+@media (max-width: 540) {
     .team-member {
         min-width: 200px;
     }

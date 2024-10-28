@@ -1,0 +1,150 @@
+:root {
+    --primary-color: black;
+    --primary-light: #534bae;
+    --secondary-color: #ffd700;
+    --text-dark: #333;
+    --spacing-unit: 2rem;
+    --transition: all 0.3s ease;
+}
+
+
+.lesson-header {
+    color: black;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.lesson-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+
+.objectives-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    transition: var(--transition);
+}
+
+.objectives-section:hover {
+    transform: translateY(-5px);
+}
+
+.objectives-list {
+    list-style: none;
+    padding: 0;
+}
+
+.objectives-list li {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.objectives-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.lesson-content {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 2rem 0 1.5rem;
+    position: relative;
+}
+
+.lesson-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.lesson-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.lesson-img:hover {
+    transform: scale(1.02);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 5vw;
+    height: 5vw;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.363);
+    border-radius: 50%;
+    padding: 1rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .lesson-header {
+        padding: 2rem 1rem;
+    }
+
+    .lesson-title {
+        font-size: 2rem;
+    }
+
+    .meta-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .objectives-section,
+    .lesson-content {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.objectives-section,
+.lesson-content {
+    animation: fadeIn 0.6s ease-out forwards;
+}

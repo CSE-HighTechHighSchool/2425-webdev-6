@@ -24,6 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="lesson-page.css">
     <link rel="stylesheet" href="../blog.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -32,7 +33,7 @@
 <body>
     <nav class="navbar p-1 navbar-expand-md navbar-dark nb-background-color sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <img src="../img/logo.png" alt="Money Minds NJ Logo">
             </a>
             <a href="index.html" class="nav-link">
@@ -44,13 +45,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
+                        <a class="nav-link hover-underline-animation" href="../lessons.html">Lessons</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="news.html">News</a>
+                        <a class="nav-link hover-underline-animation" href="../news.html">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
+                        <a class="nav-link hover-underline-animation" href="../blog.html">Blog</a>
                     </li>
                 </ul>
                 <div class="d-flex ms-auto m-1">
@@ -60,54 +61,85 @@
             </div>
         </div>
     </nav>
-    <div>
-        <div class="container mb-5">
-            <h1 class="mt-5">[Lesson Title]</h1>
-            <div class="d-flex gap-4 mx-1">
-                <span class="post-date">By: [Author]</span>
-                <span class="post-date"><i class="bi bi-clock"></i><span class="mx-2">5 Minutes</span></span>
+    <header class="lesson-header container px-2">
+        <h1 class="lesson-title">Introduction to Banking and Savings</h1>
+        <div class="meta-ino d-flex gap-4">
+            <span><i class="bi bi-person-circle"></i> By: MoneyMindsNJ Staff</span>
+            <span><i class="bi bi-clock"></i> 5 Minutes</span>
+        </div>
+        <hr>
+    </header>
+    <main class="container">
+        <section class="objectives-section">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="mb-4">Learning Objectives</h2>
+                    <ul class="objectives-list mb-5">
+                        <li>Understanding basic bank functions</li>
+                        <li>Benefits of saving accounts</li>
+                        <li>Impact of Interest rates</li>
+                        <li>Learning about emergency funds</li>
+                    </ul>
+                    <br>
+                    <p class="lead"><strong>Banks</strong>collect deposits and use those to provide funds to be loaned to other customers</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="lesson-img img-fluid" src="../img/personal-finance.bmp"
+                        alt="Personal Finance Illustration">
+                </div>
             </div>
-            <hr style="height: 2px; background-color: black;">
-        </div>
-    </div>
-    <div class="container mb-5">
-        <h2>Objectives:</h2>
-        <ul>
-            <li>Understand the history of money and different currencies</li>
-            <li>Learn budgeting basics and tracking expenses</li>
-            <li>Discover the importance of saving and different ways to save</li>
-        </ul>
-    </div>
-    <div class="container mb-5">
-        <div>
-            <h3>
-                What is <strong>Personal Finance</strong>?
-            </h3>
-            <p>Definition: "The management of saving, spending, investing, and planning of an individual's or
-                household's financial resources." Personal finance affects every part of your life now, and, eventually,
-                it will your future security and prosperity. If you want to achieve your dreams one day, you need the
-                financial
-                security that comes with good personal finance.</p>
-        </div>
-        <div>
-            <p>Integer potenti mauris neque non purus massa blandit. Consectetur justo ex ipsum donec dapibus lacus.
-                Laoreet
-                eros consequat semper suspendisse egestas. Odio nisi augue tortor justo enim. Lacinia finibus velit
-                montes leo
-                eleifend faucibus mattis. Aplatea nec etiam suspendisse natoque. Leo nisl quisque sagittis lacinia est.
-                Egestas
-                penatibus leo faucibus himenaeos cursus integer malesuada.</p>
-        </div>
-        <div>
-            <p>Massa cubilia et, dolor interdum mus senectus donec. Dapibus torquent platea natoque suscipit luctus.
-                Primis
-                amet nisl netus congue mus ornare. Vel vestibulum finibus ullamcorper, ipsum arcu himenaeos imperdiet.
-                Conubia
-                cursus ullamcorper accumsan praesent donec posuere ornare congue. Praesent platea cras maximus mi;
-                dictum elit.
-                Pretium luctus leo aenean sagittis luctus tempus quam.</p>
-        </div>
-    </div>
+        </section>
+
+        <section class="container mb-5">
+            <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/banking-imgs/slide-two.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-three.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-four.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-five.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-six.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-seven.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-eight.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-nine.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-ten.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-eleven.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/banking-imgs/slide-twelve.png" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </main>
     <footer class="finance-footer p-5 text-center position-relative">
         <div class="container">
             <div class="row">
