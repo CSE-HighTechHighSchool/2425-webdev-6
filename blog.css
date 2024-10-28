@@ -2,6 +2,14 @@
     color: black;
 }
 
+.post {
+    background-color: #fff9c4;
+    padding: 3rem 2rem 1rem 2rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+}
+
 .post-title {
     font-size: 1.75rem;
     font-weight: bold;
@@ -47,17 +55,15 @@
 
 .blog-section {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
 }
 
 /* Blog post card styles */
 .blog-section .col-sm-4 {
     flex: 0 0 auto;
-    min-width: 300px; /* Minimum width for each blog card */
-    max-width: 400px; /* Maximum width for each blog card */
-    margin: 0; /* Remove margin as we're using gap */
+    min-width: 300px; 
+    max-width: 400px; 
+    margin: 0; 
     transition: transform 0.3s ease;
 }
 
@@ -118,22 +124,19 @@
 }
 
 .keep-reading-btn:hover {
-    background-color: #000000;
+    background-color: #be8f02;
     color: #FFFFFF;
 }
-/* Optional: Add smooth scrolling behavior */
 .blog-section {
     scroll-behavior: smooth;
 }
 
-/* Ensure the content inside each blog post stays contained */
 .blog-section .col-sm-4 > div {
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-/* Optional: Add hover effect for better UX */
-.blog-section .col-sm-4:hover {
+.post:hover {
     transform: translateY(-5px);
 }
