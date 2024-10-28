@@ -15,6 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+    <script src="global.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,15 +25,20 @@
 
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
-    <nav class="navbar p-1 navbar-expand-md navbar-dark nb-background-color sticky-top">
+    <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Money Minds NJ Logo">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div>
+                    <img src="img/logo.png" alt="Money Minds NJ Logo">
+                </div>
+                <div>
+                    <h3 class="m-1">MoneyMindsNJ</h3>
+                </div>
             </a>
-            <a href="#" class="nav-link"><h3 class="m-1">MoneyMindsNJ</h3></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,33 +62,30 @@
         </div>
     </nav>
 
-    <section class="hero-section">
-        <div class="container container-heroes">
+    <div class="hero-section">
+        <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 col-12">
-                    <h1 class="display-2 text-title mb-4">MoneyMindsNJ</h1>
-                    <p class="lead mb-5">Empowering financial literacy in New Jersey, one mind at a time.</p>
-                    <div class="feature-icons row align-items-center justify-content-center">
-                        <a href="lessons.html"
-                            class="icon-text col-lg-4 col-md-6 col-12 icon-link-homepage d-flex flex-column align-items-center">
+                <div class="col-lg-6 col-12 hero-content">
+                    <h1 class="hero-title mb-4">MoneyMindsNJ</h1>
+                    <p class="hero-tagline mb-5">Empowering financial literacy in New Jersey, one mind at a time.</p>
+                    <div class="feature-icons d-flex justify-content-between">
+                        <a href="lessons.html" class="icon-link-homepage">
                             <div class="icon-wrapper">
                                 <i class="bi bi-book"></i>
                             </div>
-                            <h3>Lessons</h3>
+                            <h3 class="icon-label">Lessons</h3>
                         </a>
-                        <a href="blog.html"
-                            class="icon-text col-lg-4 col-md-6 col-12 icon-link-homepage d-flex flex-column align-items-center">
+                        <a href="blog.html" class="icon-link-homepage">
                             <div class="icon-wrapper">
                                 <i class="bi bi-pencil-square"></i>
                             </div>
-                            <h3>Blog</h3>
+                            <h3 class="icon-label">Blog</h3>
                         </a>
-                        <a href="news.html"
-                            class="icon-text col-lg-4 col-md-6 col-12 icon-link-homepage d-flex flex-column align-items-center">
+                        <a href="news.html" class="icon-link-homepage">
                             <div class="icon-wrapper">
                                 <i class="bi bi-newspaper"></i>
                             </div>
-                            <h3>News</h3>
+                            <h3 class="icon-label">News</h3>
                         </a>
                     </div>
                 </div>
@@ -92,42 +96,50 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <section class="about-us py-5">
         <div class="container">
-            <div class="content-wrapper" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: start;">
-                <div class="about-content" style="flex: 2 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 2rem;">
+            <div class="content-wrapper" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                <div class="about-content"
+                    style="flex: 2 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 2rem;">
                     <h2 class="text-title mb-4" style="font-size: 2.5rem;">About Us</h2>
-                    <p class="lead" style="font-size: 1.2rem;">Money Minds NJ is dedicated to educating individuals on financial
-                        literacy and helping them develop essential money management skills. Our mission is to make financial education
+                    <p class="lead" style="font-size: 1.2rem;">Money Minds NJ is dedicated to educating individuals on
+                        financial
+                        literacy and helping them develop essential money management skills. Our mission is to make
+                        financial education
                         accessible, engaging, and practical for everyone.</p>
-                    <p class="lead" style="font-size: 1.2rem;">Through our lessons, blog, and news updates, we provide valuable
+                    <p class="lead" style="font-size: 1.2rem;">Through our lessons, blog, and news updates, we provide
+                        valuable
                         insights and resources that empower people to take control of their financial future.</p>
                     <div class="button-container" style="margin-top: 2rem;">
-                        <a href="#timeline" class="btn btn-gold scroll-link" style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">Our Story</a>
+                        <a href="#timeline" class="btn btn-gold scroll-link"
+                            style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">Our Story</a>
                     </div>
                 </div>
-    
-                <div class="team-members" style="flex: 3 1 600px; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
-                    <div class="team-member" style="flex: 1 1 180px; display: flex; flex-direction: column; align-items: center; max-width: 250px; min-width: 160px;">
-                        <div class="img-container" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;">
-                            <img src="img/Medansh.png" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover;">
+
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="img-container">
+                            <img src="img/Medansh.png" alt="Team Member 1"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Medhansh Puri</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
-    
-                    <div class="team-member" style="flex: 1 1 180px; display: flex; flex-direction: column; align-items: center; max-width: 250px; min-width: 160px;">
-                        <div class="img-container" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;">
-                            <img src="img/Cool.png" alt="Team Member 2" style="width: 100%; height: 100%; object-fit: cover;">
+
+                    <div class="team-member">
+                        <div class="img-container">
+                            <img src="img/Cool.png" alt="Team Member 2"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Ayden Pinto</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
-    
-                    <div class="team-member" style="flex: 1 1 180px; display: flex; flex-direction: column; align-items: center; max-width: 250px; min-width: 160px;">
-                        <div class="img-container" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;">
-                            <img src="img/Saketh.jpeg" alt="Team Member 3" style="width: 100%; height: 100%; object-fit: cover;">
+
+                    <div class="team-member">
+                        <div class="img-container">
+                            <img src="img/Saketh.jpeg" alt="Team Member 3"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Saketh Satti</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
@@ -136,10 +148,9 @@
             </div>
         </div>
     </section>
-
-    <section class="about-us py-5">
-        <a id="our-story"></a>
-        <div class="container">
+    <section class="timeline-section">
+        <a id="timeline"></a>
+        <div class="container mb-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12 order-lg-2">
                     <h2 class="text-title mb-4 text-center">Our Story</h2>
@@ -151,49 +162,34 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="timeline-section-py-5" id="timeline">
+        <div class="mb-5"></div>
         <div class="container">
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">September 24, 2024>
-                            <h3>The Beginning</h3>
-                            <p>Three high school students united by their passion for financial literacy founded MoneyMindsNJ with a vision to educate their peers.</p>
-                        </div>
+                        <div class="timeline-date">September 24, 2024</div>
+                        <h3>The Beginning</h3>
+                        <p>Three high school students united by their passion for financial literacy founded
+                            MoneyMindsNJ with a vision to educate their peers.</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2024>
-                            <h3>The Middle</h3>
-                            <p>Yay</p>
-                        </div>
+                        <div class="timeline-date">2024</div>
+                        <h3>Building the Website</h3>
+                        <p>These three teens build a website to teach lessons, write blogs, and share news about
+                            finance, all for financial literacy.</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2024>
-                            <h3>The End</h3>
-                            <p>We make $$$$$</p>
-                        </div>
+                        <div class="timeline-date">2024</div>
+                        <h3>The Future</h3>
+                        <p>Empowering the next generation with financial knowledge and creating lasting positive impact
+                            in our community.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="our-mission" class="about-us py-5" style="background-color: #FFFACC;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <h2 class="text-title mb-4 text-center">Our Mission</h2>
-                    <p class="lead">Discover our mission and how we're working to empower financial literacy in New
-                        Jersey.</p>
-                    <!-- Add content about the organization's mission here -->
-                </div>
-                <div class="col-lg-6 col-md-12 text-center">
-                    <img src="img/premium_photo-1681131450196-57e6df9bc2fd.avif" alt="Mission Image"
-                        class="about-us-image">
                 </div>
             </div>
         </div>
@@ -204,18 +200,25 @@
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank" class="footer-link">Financial Calculator</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank" class="footer-link">Investment Tips</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"class="footer-link">Budget Planner</a></li>
+                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank"
+                                class="footer-link">Financial Calculator</a></li>
+                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank"
+                                class="footer-link">Investment Tips</a></li>
+                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"
+                                class="footer-link">Budget Planner</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold">Connect With Us</h4>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i class="bi bi-twitter"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i
+                                class="bi bi-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">

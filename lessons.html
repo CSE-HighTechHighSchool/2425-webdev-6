@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    
+
     <script src="lessons.js" defer></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -30,12 +30,16 @@
 </head>
 
 <body>
-    <nav class="navbar p-1 navbar-expand-md navbar-dark nb-background-color sticky-top">
+    <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="Money Minds NJ Logo">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div>
+                    <img src="img/logo.png" alt="Money Minds NJ Logo">
+                </div>
+                <div>
+                    <h3 class="m-1">MoneyMindsNJ</h3>
+                </div>
             </a>
-            <a href="index.html" class="nav-link"><h3 class="m-1">MoneyMindsNJ</h3></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,34 +68,51 @@
                 <i class="bi bi-mortarboard display-3"></i>
                 <h1 class="display-4 mb-0">My Lessons</h1>
             </div>
-    
+
             <div class="row g-4 mt-2 justify-content-center">
                 <div class="col-md-4">
-                    <a href="./lesson-pages/savings-intro.html" class="card h-100 text-decoration-none text-dark hover-shadow">
+                    <a href="./lesson-pages/savings-intro.html"
+                        class="card h-100 text-decoration-none text-dark hover-shadow">
                         <div class="card-body text-center py-4">
                             <i class="bi bi-piggy-bank display-4 mb-3"></i>
                             <h3>I. Savings & Accounts</h3>
-                            <p class="text-muted mt-2">Learn the fundamentals of saving money and managing different types of accounts.</p>
+                            <p class="text-muted mt-2">Learn the fundamentals of saving money and managing different
+                                types of accounts.</p>
                         </div>
                     </a>
                 </div>
-    
+
                 <div class="col-md-4">
-                    <a href="./lesson-pages/banking.html" class="card h-100 text-decoration-none text-dark hover-shadow">
+                    <a href="./lesson-pages/banking.html"
+                        class="card h-100 text-decoration-none text-dark hover-shadow">
                         <div class="card-body text-center py-4">
                             <i class="bi bi-bank display-4 mb-3"></i>
                             <h3>II. Banking Basics</h3>
-                            <p class="text-muted mt-2">Understand how banking works and make informed financial decisions.</p>
+                            <p class="text-muted mt-2">Understand how banking works and make informed financial
+                                decisions.</p>
                         </div>
                     </a>
                 </div>
-    
+
                 <div class="col-md-4">
-                    <a href="./lesson-pages/investments.html" class="card h-100 text-decoration-none text-dark hover-shadow">
+                    <a href="./lesson-pages/investments.html"
+                        class="card h-100 text-decoration-none text-dark hover-shadow">
                         <div class="card-body text-center py-4">
                             <i class="bi bi-graph-up display-4 mb-3"></i>
                             <h3>III. Investing Basics</h3>
-                            <p class="text-muted mt-2">Start your investment journey with fundamental concepts and strategies.</p>
+                            <p class="text-muted mt-2">Start your investment journey with fundamental concepts and
+                                strategies.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./lesson-pages/financial-future.html"
+                        class="card h-100 text-decoration-none text-dark hover-shadow">
+                        <div class="card-body text-center py-4">
+                            <i class="bi bi-hourglass-split display-4 mb-3"></i>
+                            <h3>IV. Financial Future</h3>
+                            <p class="text-muted mt-2">Learn effective financial planning for financial stability,
+                                reduced stress, and</p>
                         </div>
                     </a>
                 </div>
@@ -113,9 +134,12 @@
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank" class="footer-link">Financial Calculator</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank" class="footer-link">Investment Tips</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"class="footer-link">Budget Planner</a></li>
+                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank"
+                                class="footer-link">Financial Calculator</a></li>
+                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank"
+                                class="footer-link">Investment Tips</a></li>
+                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"
+                                class="footer-link">Budget Planner</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -144,6 +168,7 @@
         </a>
         <div class="money-rain"></div>
     </footer>
+
 </body>
 
 </html>

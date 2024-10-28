@@ -1,66 +1,184 @@
+/* Hero Section Styles */
+
 .hero-section {
-    background-color: #FFFACC;
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
 }
 
-.text-title {
-    color: #FFD700;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+.hero-content {
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #F3BA2F;
+    margin-bottom: 2rem;
+}
+
+.hero-tagline {
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 4rem;
 }
 
 .feature-icons {
     margin-top: 3rem;
+    display: flex !important;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.icon-link-homepage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: calc(33.333% - 1rem);
+    max-width: 200px;
 }
 
 .icon-wrapper {
-    background-color: #FFD700;
+    background-color: #F3BA2F;
     border-radius: 50%;
-    width: 130px;
-    height: 130px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 15px rgba(243, 186, 47, 0.2);
+}
+
+.icon-label {
+    color: #333333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
 }
 
 .icon-wrapper i {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #1a1a1a;
-}
-
-.icon-link-homepage:hover .icon-wrapper {
-    transform: scale(1.1);
 }
 
 .nj-money-shape {
     position: relative;
-    margin-left: 15rem;
+    margin-left: 4rem;
+    padding: 2rem;
 }
 
-@media screen and (max-height: 720px) {
-    .nj-money-shape {
-        margin-bottom: 4rem;
-        margin-left: 2rem;
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
-    
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
-/* About Us Section Styles */
-.about-us {
-    background-color: #1a1a1a;
-    color: black;
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.25rem;
+    }
+
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-wrapper i {
+        font-size: 2rem;
+    }
+
+    .nj-money-shape {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .hero-content {
+        padding: 2rem;
+    }
+
+    .nj-money-shape {
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
 }
-.about-us {
-    padding-top: 2rem; 
-    padding-bottom: 2rem;
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .feature-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-link-homepage {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 1rem;
+    }
 }
-.about-us h2{
-    margin-top: 0;
+
+@media (max-width: 992px) {
+    .about-us h2 {
+        font-size: 2rem;
+    }
 }
+
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+}
+
 .btn-gold {
     background-color: #FFD700;
     color: #1a1a1a;
@@ -105,19 +223,16 @@
     .hero-section {
         padding: 3rem 0;
     }
-    
+
     .nj-money-shape {
         display: none;
     }
-    
+
     .finance-stats {
         margin-top: 3rem;
     }
 }
 
-.background-color-box{   /* navbar background color */
-    background-color: #f0ebbc;
-}
 
 body::-webkit-scrollbar {
     display: none;
@@ -131,13 +246,8 @@ body::-webkit-scrollbar {
 
 .sticky-header {
     position: sticky;
-    top: 20px; 
+    top: 20px;
     scroll-margin-top: 20px;
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: #FFD700;
 }
 
 .icon-link-homepage {
@@ -151,15 +261,61 @@ body::-webkit-scrollbar {
 .icon-link-homepage:hover {
     background-color: lightgoldenrodyellow;
     border-radius: 4rem;
+
 }
 
-/* Timeline Section Styles */
+/* About Us Section Styles */
+
+.about-us {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-us h2 {
+    margin-top: 0;
+}
+
+.about-us-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.team-members {
+    flex: 3 1 600px;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    min-width: 160px;
+}
+
+.img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Timeline Section Styles*/
+
 .timeline-section {
-    background-color: #FFFACC;
     padding: 4rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #eaeaea 100%);
 }
 
 .timeline {
+
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -191,6 +347,7 @@ body::-webkit-scrollbar {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -261,17 +418,17 @@ body::-webkit-scrollbar {
     .timeline::after {
         left: 31px;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     .timeline-item:nth-child(even) {
         left: 31px;
     }
-    
+
     .timeline-item::after {
         left: 18px;
     }

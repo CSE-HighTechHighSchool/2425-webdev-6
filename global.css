@@ -12,14 +12,14 @@ nav {
     font-family: "Manrope", sans-serif; 
 }
 
-.navbar-brand img {
-    width: 30px;
+#navbar-extra {   /* navbar background color */
+    background-color: #FFFFFF;
+    backdrop-filter: blur(10px);
+    box-shadow: none;
 }
 
-.nb-background-color{   /* navbar background color */
-    background-color: #ffd90041;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.102);
+.navbar-brand img {
+    width: 30px;
 }
 
 .navbar-nav .nav-link {
@@ -33,13 +33,13 @@ nav {
 }
 
 .btn-signin {
-    background-color: #FFD700;
+    background-color: #F3BA2F;
     color: black;
     margin-right: 10px;
 }
 
 .btn-signin:hover {
-    background-color: #FFC107;
+    background-color: #fbc94a;
 }
 
 .btn-login {
@@ -146,33 +146,6 @@ nav {
     font-weight: 400;
 }
 
-
-.about-us-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-@media (max-width: 992px) {
-    .about-us h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-us h2 {
-        font-size: 1.8rem;
-    }
-    .about-us p {
-        font-size: 1rem;
-    }
-}
-.about-us {
-    background-color: #FFFACC !important;
-    color: #333;
-}
 .img-aside {
     width: 50%;
     height: auto;
@@ -184,6 +157,16 @@ nav {
 .navbar-brand-container {
     display: flex;
     align-items: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #F3BA2F;
+}
+
+.navbar-brand:hover {
+    color:rgb(219, 164, 0);
+
 }
 
 .navbar-nav {
@@ -258,6 +241,14 @@ nav {
         text-align: center;
     }
 }
+
+@media (min-width: 1420px) {
+    .container-heroes {
+        height: fit-content;
+        padding: 20px;
+    }
+}
+
 /* Finance Footer Styles */
 .finance-footer {
     background-color: #1a1a1a;
