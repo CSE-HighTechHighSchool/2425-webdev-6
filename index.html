@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+    <script>
+      function openModal(modalId) {
+        document.getElementById(modalId).style.display = "flex";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Money Minds NJ</title>
@@ -108,43 +123,39 @@
                 <div class="about-content"
                     style="flex: 2 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 2rem;">
                     <h2 class="text-title mb-4" style="font-size: 2.5rem;">About Us</h2>
-                    <p class="lead" style="font-size: 1.2rem;">Money Minds NJ is dedicated to educating individuals on
-                        financial
+                    <p class="lead" style="font-size: 1.2rem;">Money Minds NJ is dedicated to educating individuals on financial
                         literacy and helping them develop essential money management skills. Our mission is to make
-                        financial education
-                        accessible, engaging, and practical for everyone.</p>
-                    <p class="lead" style="font-size: 1.2rem;">Through our lessons, blog, and news updates, we provide
-                        valuable
+                        financial education accessible, engaging, and practical for everyone.</p>
+                    <p class="lead" style="font-size: 1.2rem;">Through our lessons, blog, and news updates, we provide valuable
                         insights and resources that empower people to take control of their financial future.</p>
                     <div class="button-container" style="margin-top: 2rem;">
                         <a href="#timeline" class="btn btn-gold scroll-link"
                             style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">Our Story</a>
                     </div>
                 </div>
-
-                <div class="team-members">
-                    <div class="team-member">
+    
+                <!-- Team Members Section -->
+                <div class="team-members" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <!-- Team Member Card -->
+                    <div class="team-member card" onclick="openModal('modalMedhansh')" style="cursor: pointer; width: 200px; text-align: center;">
                         <div class="img-container">
-                            <img src="img/Medansh.png" alt="Team Member 1"
-                                style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="img/Medansh.png" alt="Team Member 1" style="width: 100%; height: auto; object-fit: cover;">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Medhansh Puri</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
-
-                    <div class="team-member">
+    
+                    <div class="team-member card" onclick="openModal('modalAyden')" style="cursor: pointer; width: 200px; text-align: center;">
                         <div class="img-container">
-                            <img src="img/Cool.png" alt="Team Member 2"
-                                style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="img/Cool.png" alt="Team Member 2" style="width: 100%; height: auto; object-fit: cover;">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Ayden Pinto</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
-
-                    <div class="team-member">
+    
+                    <div class="team-member card" onclick="openModal('modalSaketh')" style="cursor: pointer; width: 200px; text-align: center;">
                         <div class="img-container">
-                            <img src="img/Saketh.jpeg" alt="Team Member 3"
-                                style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="img/Saketh.jpeg" alt="Team Member 3" style="width: 100%; height: auto; object-fit: cover;">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Saketh Satti</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
@@ -152,7 +163,31 @@
                 </div>
             </div>
         </div>
+    
+        <!-- Modals for each team member -->
+        <div id="modalMedhansh" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalMedhansh')">&times;</span>
+                <h2>Medhansh Puri</h2>
+                <p>More details about Medhansh Puri go here.</p>
+            </div>
+        </div>
+        <div id="modalAyden" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalAyden')">&times;</span>
+                <h2>Ayden Pinto</h2>
+                <p>More details about Ayden Pinto go here.</p>
+            </div>
+        </div>
+        <div id="modalSaketh" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modalSaketh')">&times;</span>
+                <h2>Saketh Satti</h2>
+                <p>More details about Saketh Satti go here.</p>
+            </div>
+        </div>
     </section>
+    
     <section class="timeline-section">
         <a id="timeline"></a>
         <div class="container mb-5">

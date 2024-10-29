@@ -25,3 +25,16 @@ document.addEventListener("hidden.bs.modal", function (event) {
     element.style.transform = "translateY(10px)";
   });
 });
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "flex";
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target.classList.contains('modal')) {
+      event.target.style.display = "none";
+  }
+}
