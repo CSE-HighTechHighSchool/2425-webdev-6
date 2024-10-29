@@ -94,11 +94,6 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .icon-title {
-        font-size: 1rem;
-    }
-}
 
 @keyframes float {
 
@@ -112,7 +107,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .hero-title {
         font-size: 3.5rem;
     }
