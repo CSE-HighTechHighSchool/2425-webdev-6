@@ -1,8 +1,10 @@
+/*Creates flex display with a gap between elements*/
 .news-container {
     display: flex;
     gap: 2rem;
 }
 
+/*Creates new-list container holding news items*/
 .news-list {
     flex: 1;
     max-height: 500px;
@@ -14,6 +16,7 @@
     box-shadow: 0 4px 15px rgba(197, 141, 0, 0.358);
 }
 
+/*Code for all news items with darkening on hover*/
 .news-item {
     display: flex;
     align-items: center;
@@ -43,6 +46,7 @@
     font-size: 1rem;
 }
 
+/*Featured news with darkening on hover*/
 .featured-news {
     flex: 1;
     display: flex;
@@ -77,15 +81,9 @@
     margin: 0;
 }
 
-.bg-econ {
-    padding: 2rem 0;
-}
-
-
-.bg-finance {
-    padding: 2rem 0;
-}
-
+/*Padding for news sections*/
+.bg-econ,
+.bg-finance, 
 .bg-stock {
     padding: 2rem 0;
 }
