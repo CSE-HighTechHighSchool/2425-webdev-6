@@ -118,7 +118,7 @@
                         </div>
                         <div class="modal-body">
                             <h2>A Global Spike in Inflation is Rewriting Financial Markets</h2>
-                            <img src="https://example.com/images/global-inflation.jpg" alt="Global Inflation Chart"
+                            <img src="IMG/Inflation-COTW-Drivers-Sep-2022-1024x1024 (1).png" alt="Global Inflation Chart"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>A global spike in <strong>inflation</strong> is now rewriting financial markets as
                                 central banks fight against rising prices. Inflation rates are surging to levels not
@@ -247,7 +247,7 @@
                         <div class="modal-body">
                             <!-- Article 2 Content -->
                             <h2>Global Supply Chain Crisis Hinders Economic Recovery</h2>
-                            <img src="https://example.com/images/supply-chain-crisis.jpg"
+                            <img src="IMG/supply-chain.jpg"
                                 alt="Global Supply Chain Crisis"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>The global <strong>supply chain crisis</strong> is the greatest hindrance to economic
@@ -272,7 +272,7 @@
                             </p>
 
                             <h3>Impact on Industries</h3>
-                            <img src="https://example.com/images/congested-port.jpg" alt="Congested Port"
+                            <img src="IMG/Blog-EasyHaul-Port-Congestion-Title.webp" alt="Congested Port"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>All industries are affected. The chip shortage has forced the auto industry to halt
                                 production and reduce the availability of vehicles, causing an increase in prices. The
@@ -366,7 +366,7 @@
                         </div>
                         <div class="modal-body">
                             <h2>Cryptocurrency Volatility in 2023: What Investors Need to Know</h2>
-                            <img src="https://example.com/images/cryptocurrency-volatility.jpg"
+                            <img src="IMG/crypto.jpg"
                                 alt="Cryptocurrency Market Volatility"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>The year 2023 has been marked by strong volatility in the <strong>cryptocurrency
@@ -484,7 +484,7 @@
                         </div>
                         <div class="modal-body">
                             <h2>The Global Energy Crisis: Impact on Markets and the Economy</h2>
-                            <img src="https://example.com/images/high-gas-prices.jpg"
+                            <img src="IMG/gas station.jpg"
                                 alt="High Gas Prices Displayed at a Gas Station"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>The global <strong>energy crisis</strong> has continued to deteriorate, taking many
@@ -513,7 +513,7 @@
                             </ul>
 
                             <h3>Impact on Industries and Consumers</h3>
-                            <img src="https://example.com/images/energy-sector-impact.jpg" alt="Energy Sector Impact"
+                            <img src="IMG/energy.jpeg" alt="Energy Sector Impact"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>This energy crisis has sent shockwaves across energy-dependent industries. Their
                                 operations have become significantly more costly due to rising energy prices. The
@@ -585,6 +585,26 @@
 
         </div>
     </div>
+    <script>
+        document.addEventListener("shown.bs.modal", function(event) {
+            const modalBodyElements = event.target.querySelectorAll(".modal-body > *");
+            let delay = 0.2;
+            
+            modalBodyElements.forEach(element => {
+                element.style.animationDelay = `${delay}s`;
+                delay += 0.2;
+            });
+        });
+
+        document.addEventListener("hidden.bs.modal", function(event) {
+            const modalBodyElements = event.target.querySelectorAll(".modal-body > *");
+            
+            modalBodyElements.forEach(element => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(10px)";
+            });
+        });
+    </script>
     <footer class="finance-footer p-5 text-center position-relative">
         <div class="container">
             <div class="row">
