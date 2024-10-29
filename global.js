@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -6,4 +6,22 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar-extra").style.boxShadow = "none";
   }
-} 
+}
+document.addEventListener("shown.bs.modal", function (event) {
+  const modalBodyElements = event.target.querySelectorAll(".modal-body > *");
+  let delay = 0.2;
+
+  modalBodyElements.forEach(element => {
+    element.style.animationDelay = `${delay}s`;
+    delay += 0.2;
+  });
+});
+
+document.addEventListener("hidden.bs.modal", function (event) {
+  const modalBodyElements = event.target.querySelectorAll(".modal-body > *");
+
+  modalBodyElements.forEach(element => {
+    element.style.opacity = "0";
+    element.style.transform = "translateY(10px)";
+  });
+});

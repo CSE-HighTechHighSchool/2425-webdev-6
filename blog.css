@@ -140,3 +140,102 @@
 .post:hover {
     transform: translateY(-5px);
 }
+/* Fade-in and zoom animation for modals */
+.modal.fade .modal-dialog {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Smooth reveal for modal body content */
+.modal-body > * {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: contentFadeIn 0.4s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes contentFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button hover effect */
+.keep-reading-btn {
+    transition: all 0.3s ease;
+}
+
+.keep-reading-btn:hover {
+    background-color: #0056b3; /* Slightly darker */
+    transform: scale(1.05);
+}
+
+/* Image subtle zoom on hover */
+.modal-body img {
+    transition: transform 0.3s ease;
+}
+
+.modal-body img:hover {
+    transform: scale(1.05);
+}
+/* Modal background and text styling */
+.modal-content {
+    background-color: #fff9e6; /* Light yellow background */
+    border: 1px solid #d4a017; /* Golden border */
+    color: #8a6d1e; /* Darker gold text for high contrast */
+}
+
+/* Header styling */
+.modal-header {
+    background-color: #d4a017; /* Gold header */
+    color: white;
+}
+
+.modal-header .modal-title {
+    color: white; /* Ensures title is readable on gold background */
+}
+
+.modal-header .btn-close {
+    background-color: #8a6d1e; /* Dark gold for close button */
+    opacity: 0.8;
+}
+.modal-header .btn-close:hover {
+    opacity: 1; /* Slight opacity change on hover */
+}
+
+/* Body text */
+.modal-body {
+    color: #8a6d1e; /* Dark gold text */
+}
+
+/* Links */
+.modal-body a {
+    color: #d4a017; /* Gold links */
+    text-decoration: underline;
+}
+.modal-body a:hover {
+    color: #8a6d1e; /* Darker gold on hover */
+}
+
+/* Footer and buttons */
+.modal-footer {
+    background-color: #fff9e6; /* Match footer background with modal */
+}
+
+.btn-secondary {
+    background-color: #d4a017; /* Gold button */
+    border-color: #d4a017;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #8a6d1e; /* Darker gold on hover */
+    border-color: #8a6d1e;
+}
