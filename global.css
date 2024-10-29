@@ -14,19 +14,21 @@ nav {
 
 #navbar-extra {   /* navbar background color */
     background-color: #FFFFFF;
-    backdrop-filter: blur(10px);
     box-shadow: none;
 }
 
+/*Navbar image width */
 .navbar-brand img {
     width: 30px;
 }
 
+/*Navbar links to other pages*/
 .navbar-nav .nav-link {
     font-weight: bold;
     color: black;
 }
 
+/*Button container and hover animation*/
 .btn-signin, .btn-login {
     border-radius: 20px;
     font-weight: bold;
@@ -59,10 +61,10 @@ nav {
 /* Scroll wrapper */
 .scroll-wrapper {
     height: 100%;
-    overflow-y: scroll; /* This div is the one that will actually scroll */
-    padding-top: 2px;  /* Space at the top */
-    padding-bottom: 2px; /* Space at the bottom */
-    box-sizing: border-box; /* Ensures padding is included in the container height */
+    overflow-y: scroll;
+    padding-top: 2px; 
+    padding-bottom: 2px; 
+    box-sizing: border-box;
 }
 
 /* Each box inside the scroll container */
@@ -73,7 +75,7 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    margin: 15px 0; /* Consistent margin between the boxes */
+    margin: 15px 0;
 }
 
 /* Hover effect */
@@ -100,6 +102,7 @@ nav {
     background-color: #d7d7d74a;
 }
 
+
 .navbar-nav {
     margin-left: auto;
     margin-right: auto;
@@ -116,6 +119,7 @@ nav {
     background-image: url("img/Hamburger_icon.svg.png");
 }
 
+/*Hover underline animation*/
 .hover-underline-animation:after {
     content: '';
     position: absolute;
@@ -154,6 +158,7 @@ nav {
     margin-top: 4rem;
 }
 
+/*Navbar positioning*/
 .navbar-brand-container {
     display: flex;
     align-items: center;
@@ -197,6 +202,7 @@ nav {
     padding: 2rem 0;
 }
 
+/* Code for the icon text */
 .icon-text {
     display: flex;
     flex-direction: column;
@@ -259,6 +265,7 @@ nav {
     gap: 1rem;
 }
 
+/* Icon and animation */
 .social-icon {
     color: #FFD700;
     font-size: 1.5rem;
@@ -269,6 +276,7 @@ nav {
     transform: scale(1.2);
 }
 
+/* Newsletter input */
 .newsletter-form {
     display: flex;
     gap: 0.5rem;
@@ -281,6 +289,7 @@ nav {
     border-radius: 4px;
 }
 
+/* Golden button format and animation */
 .btn-gold {
     background-color: #FFD700;
     color: #1a1a1a;
