@@ -2,21 +2,6 @@
 <html lang="en">
 
 <head>
-    <script>
-      function openModal(modalId) {
-        document.getElementById(modalId).style.display = "flex";
-    }
-
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.style.display = "none";
-        }
-    }
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Money Minds NJ</title>
@@ -79,10 +64,14 @@
             </div>
         </div>
     </nav>
+
+    <!-- Disclaimer -->
     <div class="text-center">
-        This website is for A SCHOOL ASSIGNMENT. It is not a real website. 
+        This website is for A SCHOOL ASSIGNMENT. It is not a real website.
     </div>
-    <div class="hero-section">
+
+    <!-- Hero Section (New Jersey Money Image and MoneyMindsNJ Island) -->
+    <main class="hero-section">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6 col-12 hero-content">
@@ -116,54 +105,59 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <!---- About Us Section -->
     <section class="about-us py-5">
         <div class="container">
-            <div class="content-wrapper" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-                <div class="about-content"
-                    style="flex: 2 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 2rem;">
-                    <h2 class="text-title mb-4" style="font-size: 2.5rem;">About Us</h2>
-                    <p class="lead" style="font-size: 1.2rem;">Money Minds NJ is dedicated to educating individuals on financial
+            <div class="content-wrapper">
+                <div class="about-content">
+                    <h2 class="text-title mb-4">About Us</h2>
+                    <p class="lead">Money Minds NJ is dedicated to educating individuals on
+                        financial
                         literacy and helping them develop essential money management skills. Our mission is to make
                         financial education accessible, engaging, and practical for everyone.</p>
-                    <p class="lead" style="font-size: 1.2rem;">Through our lessons, blog, and news updates, we provide valuable
+                    <p class="lead">Through our lessons, blog, and news updates, we provide
+                        valuable
                         insights and resources that empower people to take control of their financial future.</p>
                     <div class="button-container" style="margin-top: 2rem;">
                         <a href="#timeline" class="btn btn-gold scroll-link"
                             style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">Our Story</a>
                     </div>
                 </div>
-    
+
                 <!-- Team Members Section -->
-                <div class="team-members" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                    <!-- Team Member Card -->
-                    <div class="team-member card" onclick="openModal('modalMedhansh')" style="cursor: pointer; width: 200px; text-align: center;">
+                <div class="team-members">
+                    <!-- Team Member Card Medhansh -->
+                    <div class="team-member card" onclick="openModal('modalMedhansh')">
                         <div class="img-container">
-                            <img src="img/Medansh.png" alt="Team Member 1" style="width: 100%; height: auto; object-fit: cover;">
+                            <img src="img/medansh.png" alt="Team Member 1">
                         </div>
-                        <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Medhansh Puri</h5>
+                        <h5 class="mt-3" style=" font-size: 1.1rem;">Medhansh Puri</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
-    
-                    <div class="team-member card" onclick="openModal('modalAyden')" style="cursor: pointer; width: 200px; text-align: center;">
-                        <div class="img-container">
-                            <img src="img/Cool.png" alt="Team Member 2" style="width: 100%; height: auto; object-fit: cover;">
+
+                    <!-- Team Member Card Ayden -->
+                    <div class="team-member card" onclick="openModal('modalAyden')">
+                        <div class="img-container d-flex justify-content-center align-items-center">
+                            <img src="img/ayden.jpg" alt="Team Member 2">
                         </div>
                         <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Ayden Pinto</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
-    
-                    <div class="team-member card" onclick="openModal('modalSaketh')" style="cursor: pointer; width: 200px; text-align: center;">
+
+                    <!-- Team Member Card Saketh -->
+                    <div class="team-member card" onclick="openModal('modalSaketh')">
                         <div class="img-container">
-                            <img src="img/Saketh.jpeg" alt="Team Member 3" style="width: 100%; height: auto; object-fit: cover;">
+                            <img src="img/saketh.jpeg" alt="Team Member 3">
                         </div>
-                        <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Saketh Satti</h5>
+                        <h5 class="mt-3" style="font-size: 1.1rem;">Saketh Satti</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Modals for each team member -->
         <div id="modalMedhansh" class="modal">
             <div class="modal-content">
@@ -172,22 +166,32 @@
                 <p>More details about Medhansh Puri go here.</p>
             </div>
         </div>
+
         <div id="modalAyden" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalAyden')">&times;</span>
                 <h2>Ayden Pinto</h2>
-                <p>More details about Ayden Pinto go here.</p>
+                <p>Hey! My name is Ayden Pinto, and I am a Junior at High Technology High School, one of the best STEM
+                    schools in the nation. I've created this website with my peers, Saketh and Medhansh, as an extension
+                    of my love for finance. I am the Director of Entrepreneurship at my high school. Outside of school,
+                    I love to be outdoors. More specifically, I love to bike and play soccer. I've been playing soccer
+                    since I was three, and I currently play on Manalapan High School's Varsity Soccer team. My team is
+                    ranked number two in the Shore! Overall, I'm a fun-loving, hard-working, and extremely sociable teen
+                    who loves finance and the world of money!</p>
             </div>
         </div>
         <div id="modalSaketh" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalSaketh')">&times;</span>
                 <h2>Saketh Satti</h2>
-                <p>More details about Saketh Satti go here.</p>
+                <p>Hello! I'm Saketh Satti, one of the authors of this website. I'm very interesting in Artifical
+                    Intelligence and its applications in a wide range of subjects, especially Large Language Models
+                    (LLMs). I also like biking, listening to music, and watching TV Shows.</p>
             </div>
         </div>
     </section>
-    
+
+    <!-- Timeline Section -->
     <section class="timeline-section">
         <a id="timeline"></a>
         <div class="container mb-5">
@@ -234,6 +238,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer class="finance-footer p-5 text-center position-relative">
         <div class="container">
             <div class="row">

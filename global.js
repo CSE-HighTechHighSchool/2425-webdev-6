@@ -1,3 +1,6 @@
+
+// JS for the navbar.
+// Everytime you scroll below a certain amount, a shadow is added to the navbar.
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -7,6 +10,9 @@ function scrollFunction() {
     document.getElementById("navbar-extra").style.boxShadow = "none";
   }
 }
+
+// Blog modal JS
+// Opens up Blog with an animation
 document.addEventListener("shown.bs.modal", function (event) {
   const modalBodyElements = event.target.querySelectorAll(".modal-body > *");
   let delay = 0.2;
@@ -25,6 +31,8 @@ document.addEventListener("hidden.bs.modal", function (event) {
     element.style.transform = "translateY(10px)";
   });
 });
+
+// Front page modal JS
 function openModal(modalId) {
   document.getElementById(modalId).style.display = "flex";
 }
