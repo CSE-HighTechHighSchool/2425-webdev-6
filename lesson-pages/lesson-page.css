@@ -1,3 +1,6 @@
+/* Consistent styling for all lesson pages */
+
+/* Global CSS variables */
 :root {
     --primary-color: black;
     --primary-light: #534bae;
@@ -7,7 +10,7 @@
     --transition: all 0.3s ease;
 }
 
-
+/* Title, Time Length, and Authors */
 .lesson-header {
     color: black;
     padding: 3rem 2rem;
@@ -20,7 +23,7 @@
     margin-bottom: 1.5rem;
 }
 
-
+/* Middle Section styles (Objectives, Definitions, and Images). */
 .objectives-section {
     background: white;
     border-radius: 12px;
@@ -37,6 +40,11 @@
 .objectives-list {
     list-style: none;
     padding: 0;
+}
+
+.objectives-section,
+.lesson-content {
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
 .objectives-list li {
@@ -97,16 +105,21 @@
     transform: scale(1.02);
 }
 
+/* Slideshow Styles */
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     width: 5vw;
     height: 5vw;
     color: black;
-    background-color: rgba(0, 0, 0, 0.363);
     border-radius: 50%;
     padding: 1rem 1rem;
     filter: invert(1);
+    /* This makes the slider icons black, which you cannot do by changing the color */
 }
+
+
+/* Media Queries */
 
 @media (max-width: 768px) {
     .lesson-header {
@@ -133,6 +146,12 @@
     }
 }
 
+/* 
+    * Keyframes help control the progress of an animation 
+    * The animation will start at 0% Opacity and end at 100% 
+    * It also starts 20px below, and moves up 
+*/
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -143,9 +162,4 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.objectives-section,
-.lesson-content {
-    animation: fadeIn 0.6s ease-out forwards;
 }
