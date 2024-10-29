@@ -88,6 +88,17 @@
     filter: drop-shadow(0 10px 30px rgba(197, 141, 0, 0.358));
 }
 
+@media screen and (min-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .icon-title {
+        font-size: 1rem;
+    }
+}
 
 @keyframes float {
 
@@ -104,6 +115,10 @@
 @media (max-width: 992px) {
     .hero-title {
         font-size: 3.5rem;
+    }
+
+    .icon-label {
+        font-size: 1rem;
     }
 
     .hero-tagline {
