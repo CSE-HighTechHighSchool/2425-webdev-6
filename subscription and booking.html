@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoSmart - Subscription Plans & Pickup Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <style>
+        /* Base Styles */
+        /* (Include base styles similar to index.html) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2ecc71;
+            --secondary: #27ae60;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+
+        body {
+            background-color: #f5f6fa;
+            color: var(--dark);
+        }
+
+        /* Navigation Styles */
+        nav {
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Subscription Plans */
+        .plans {
+            padding: 120px 2rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .plans h2 {
+            margin-bottom: 2rem;
+        }
+
+        .plan-cards {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .plan-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .plan-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .plan-card .price {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .plan-card ul {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .plan-card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-card button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .plan-card button:hover {
+            background: var(--secondary);
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .booking h2 {
+            margin-bottom: 2rem;
+        }
+
+        .calendar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 1rem;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 40px);
+            gap: 5px;
+        }
+
+        .calendar-day,
+        .calendar-cell {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-cell {
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .calendar-cell:hover {
+            background: var(--light);
+        }
+
+        .calendar-cell.disabled {
+            background: #e0e0e0;
+            cursor: default;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            text-align: left;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 1rem;
+        }
+
+        .modal-content label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-content input,
+        .modal-content textarea,
+        .modal-content select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--light);
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .modal-content button:hover {
+            background: var(--secondary);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .plan-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .calendar-grid {
+                grid-template-columns: repeat(7, 30px);
+            }
+
+            .calendar-cell,
+            .calendar-day {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">EcoSmart</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#plans">Plans</a>
+                <a href="#booking">Book Pickup</a>
+                <a href="game.html" class="btn">Play Game</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subscription Plans -->
+    <section class="plans" id="plans">
+        <h2>Choose Your Plan</h2>
+        <div class="plan-cards">
+            <div class="plan-card">
+                <h3>Basic Plan</h3>
+                <p class="price">$19/month</p>
+                <ul>
+                    <li>Weekly Pickups</li>
+                    <li>Basic Waste Tracking</li>
+                    <li>Email Support</li>
+                </ul>
+                <button onclick="selectPlan('Basic')">Select Plan</button>
+            </div>
+            <div class="plan-card">
+                <h3>Standard Plan</h3>
+                <p class="price">$29/month</p>
+                <ul>
+                    <li>Bi-Weekly Pickups</li>
+                    <li>Detailed Reports</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button onclick="selectPlan('Standard')">Select Plan</button>
+            </div>
+            <div class="plan-card">
+                <h3>Premium Plan</h3>
+                <p class="price">$39/month</p>
+                <ul>
+                    <li>Unlimited Pickups</li>
+                    <li>Advanced Analytics</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button onclick="selectPlan('Premium')">Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <h2>Book a Pickup</h2>
+        <div class="calendar">
+            <div class="calendar-header">
+                <button onclick="prevMonth()">&lt;</button>
+                <h3 id="calendarMonth"></h3>
+                <button onclick="nextMonth()">&gt;</button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3>Schedule Pickup on <span id="selectedDate"></span></h3>
+            <form onsubmit="submitBooking(event)">
+                <label for="pickupTime">Preferred Time:</label>
+                <select id="pickupTime" required>
+                    <option value="">Select Time</option>
+                    <option>Morning (8 AM - 12 PM)</option>
+                    <option>Afternoon (12 PM - 4 PM)</option>
+                    <option>Evening (4 PM - 8 PM)</option>
+                </select>
+                <label for="instructions">Special Instructions:</label>
+                <textarea id="instructions" rows="4"></textarea>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" style="display: none;"></div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Variables
+        let selectedPlan = '';
+        let currentDate = new Date();
+        let selectedDate = '';
+
+        // Select Plan
+        function selectPlan(plan) {
+            selectedPlan = plan;
+            alert('You have selected the ' + plan + ' plan.');
+            // Additional code to handle plan selection can be added here
+        }
+
+        // Generate Calendar
+        function generateCalendar(date) {
+            const calendarGrid = document.getElementById('calendarGrid');
+            calendarGrid.innerHTML = '';
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            document.getElementById('calendarMonth').innerText = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+            // Add Day Labels
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            days.forEach(day => {
+                const dayCell = document.createElement('div');
+                dayCell.classList.add('calendar-day');
+                dayCell.innerText = day;
+                calendarGrid.appendChild(dayCell);
+            });
+
+            // Add Empty Cells for Days Before First Day
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.classList.add('calendar-cell', 'disabled');
+                calendarGrid.appendChild(emptyCell);
+            }
+
+            // Add Day Cells
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.classList.add('calendar-cell');
+                dayCell.innerText = day;
+                dayCell.onclick = () => openModal(day);
+                calendarGrid.appendChild(dayCell);
+            }
+        }
+
+        // Navigate Months
+        function prevMonth() {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            generateCalendar(currentDate);
+        }
+
+        function nextMonth() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            generateCalendar(currentDate);
+        }
+
+        // Open Modal
+        function openModal(day) {
+            selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+            document.getElementById('selectedDate').innerText = selectedDate.toDateString();
+            document.getElementById('bookingModal').style.display = 'flex';
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        // Submit Booking
+        function submitBooking(event) {
+            event.preventDefault();
+            const time = document.getElementById('pickupTime').value;
+            const instructions = document.getElementById('instructions').value;
+            alert('Pickup scheduled on ' + selectedDate.toDateString() + ' at ' + time + '.');
+            closeModal();
+        }
+
+        // Initialize Calendar on Page Load
+        window.onload = () => {
+            generateCalendar(currentDate);
+        }
+    </script>
+</body>
+</html>

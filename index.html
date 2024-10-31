@@ -1,296 +1,388 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Money Minds NJ</title>
-    <title>MoneyMindsNJ</title>
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>EcoSmart - Leading the Way in Smart Waste Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+        :root {
+            --primary: #2ecc71;
+            --secondary: #27ae60;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+        body {
+            background-color: #f5f6fa;
+            color: var(--dark);
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        /* Navigation Styles */
+        nav {
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
 
-    <script src="global.js" defer></script>
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Manrope:wght@200..800&display=swap"
-        rel="stylesheet">
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
 
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="index.css">
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
 
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 2rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1534330207526-cd4bd1bf3496');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            padding-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            width: 50%;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            line-height: 1.6;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            background: var(--light);
+            padding: 4rem 2rem;
+        }
+
+        .timeline h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .timeline ul {
+            list-style: none;
+            position: relative;
+            padding-left: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline ul::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: var(--primary);
+            transform: translateX(-50%);
+        }
+
+        .timeline li {
+            position: relative;
+            width: 50%;
+            padding: 1rem;
+        }
+
+        .timeline li:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline li:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            position: relative;
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline li:nth-child(odd) .timeline-content::before {
+            right: -5px;
+        }
+
+        .timeline li:nth-child(even) .timeline-content::before {
+            left: -5px;
+        }
+
+        /* Community Impact */
+        .community-impact {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .community-impact h2 {
+            margin-bottom: 2rem;
+        }
+
+        .impact-cards {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .impact-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+
+            .about img,
+            .about-text {
+                width: 100%;
+            }
+
+            .timeline ul::before {
+                left: 20px;
+            }
+
+            .timeline li {
+                width: 100%;
+                left: 0;
+                text-align: left;
+                padding-left: 40px;
+            }
+
+            .timeline-content::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
-        <div class="container">
-            <!--Icon and title of website-->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <div>
-                    <img src="img/logo.png" alt="Money Minds NJ Logo">
-                </div>
-                <div>
-                    <h3 class="m-1">MoneyMindsNJ</h3>
-                </div>
-            </a>
-
-            <!--Hamburger icon for collapse-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
-                    </li>
-                </ul>
-
-                <!--Sign in and log in buttons-->
-                <div class="d-flex ms-auto m-1">
-                    <a href="#" class="btn btn-signin">Sign Up</a>
-                    <a href="#" class="btn btn-login">Log In</a>
-                </div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">EcoSmart</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#community">Community Impact</a>
+                <a href="subscription.html" class="btn">Get Started</a>
             </div>
         </div>
     </nav>
 
-    <!-- Disclaimer -->
-    <div class="text-center">
-        This website is for A SCHOOL ASSIGNMENT. It is not a real website.
-    </div>
-
-    <!-- Hero Section (New Jersey Money Image and MoneyMindsNJ Island) -->
-    <main class="hero-section">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 col-12 hero-content">
-                    <h1 class="hero-title mb-4">MoneyMindsNJ</h1>
-                    <p class="hero-tagline mb-5">Empowering financial literacy in New Jersey, one mind at a time.</p>
-                    <div class="feature-icons d-flex justify-content-between">
-                        <a href="lessons.html" class="icon-link-homepage">
-                            <div class="icon-wrapper">
-                                <i class="bi bi-book"></i>
-                            </div>
-                            <h3 class="icon-label">Lessons</h3>
-                        </a>
-                        <a href="blog.html" class="icon-link-homepage">
-                            <div class="icon-wrapper">
-                                <i class="bi bi-pencil-square"></i>
-                            </div>
-                            <h3 class="icon-label">Blog</h3>
-                        </a>
-                        <a href="news.html" class="icon-link-homepage">
-                            <div class="icon-wrapper">
-                                <i class="bi bi-newspaper"></i>
-                            </div>
-                            <h3 class="icon-label">News</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 d-none d-lg-block">
-                    <div class="nj-money-shape">
-                        <img src="img/newjerseymoney.png" alt="New Jersey Money Shape" class="img-fluid">
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to EcoSmart</h1>
+            <p>Leading the way in smart waste management solutions for a cleaner, greener future.</p>
+            <a href="subscription.html" class="btn">Join Us</a>
         </div>
-    </main>
+    </section>
 
-    <!---- About Us Section -->
-    <section class="about-us py-5">
-        <div class="container">
-            <div class="content-wrapper">
-                <div class="about-content">
-                    <h2 class="text-title mb-4">About Us</h2>
-                    <p class="lead">Money Minds NJ is dedicated to educating individuals on
-                        financial
-                        literacy and helping them develop essential money management skills. Our mission is to make
-                        financial education accessible, engaging, and practical for everyone.</p>
-                    <p class="lead">Through our lessons, blog, and news updates, we provide
-                        valuable
-                        insights and resources that empower people to take control of their financial future.</p>
-                    <div class="button-container" style="margin-top: 2rem;">
-                        <a href="#timeline" class="btn btn-gold scroll-link"
-                            style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">Our Story</a>
-                    </div>
-                </div>
-
-                <!-- Team Members Section -->
-                <div class="team-members">
-                    <!-- Team Member Card Medhansh -->
-                    <div class="team-member card" onclick="openModal('modalMedhansh')">
-                        <div class="img-container">
-                            <img src="img/medansh.png" alt="Team Member 1">
-                        </div>
-                        <h5 class="mt-3" style=" font-size: 1.1rem;">Medhansh Puri</h5>
-                        <p class="text-muted" style="margin: 0;">Co-Founder</p>
-                    </div>
-
-                    <!-- Team Member Card Ayden -->
-                    <div class="team-member card" onclick="openModal('modalAyden')">
-                        <div class="img-container d-flex justify-content-center align-items-center">
-                            <img src="img/ayden.jpg" alt="Team Member 2">
-                        </div>
-                        <h5 class="mt-3" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Ayden Pinto</h5>
-                        <p class="text-muted" style="margin: 0;">Co-Founder</p>
-                    </div>
-
-                    <!-- Team Member Card Saketh -->
-                    <div class="team-member card" onclick="openModal('modalSaketh')">
-                        <div class="img-container">
-                            <img src="img/saketh.jpeg" alt="Team Member 3">
-                        </div>
-                        <h5 class="mt-3" style="font-size: 1.1rem;">Saketh Satti</h5>
-                        <p class="text-muted" style="margin: 0;">Co-Founder</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modals for each team member -->
-        <div id="modalMedhansh" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modalMedhansh')">&times;</span>
-                <h2>Medhansh Puri</h2>
-                <p>Hello everyone! My name is Medhansh Puri and I am a junior at High Technology High School with a
-                    passion in finance and investments. I also am interested in a variety of other topics such as biking
-                    and watching movies.</p>
-            </div>
-        </div>
-
-        <div id="modalAyden" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modalAyden')">&times;</span>
-                <h2>Ayden Pinto</h2>
-                <p>Hey! My name is Ayden Pinto, and I am a Junior at High Technology High School, one of the best STEM
-                    schools in the nation. I've created this website with my peers, Saketh and Medhansh, as an extension
-                    of my love for finance. I am the Director of Entrepreneurship at my high school. Outside of school,
-                    I love to be outdoors. More specifically, I love to bike and play soccer. I've been playing soccer
-                    since I was three, and I currently play on Manalapan High School's Varsity Soccer team. My team is
-                    ranked number two in the Shore! Overall, I'm a fun-loving, hard-working, and extremely sociable teen
-                    who loves finance and the world of money!</p>
-            </div>
-        </div>
-        <div id="modalSaketh" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modalSaketh')">&times;</span>
-                <h2>Saketh Satti</h2>
-                <p>Hello! I'm Saketh Satti, one of the authors of this website. I'm very interesting in Artifical
-                    Intelligence and its applications in a wide range of subjects, especially Large Language Models
-                    (LLMs). I also like biking, listening to music, and watching TV Shows.</p>
-            </div>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <img src="https://images.unsplash.com/photo-1565377672221-64570e2d6e3c" alt="EcoSmart">
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>
+                At EcoSmart, we aim to revolutionize waste management by integrating smart technologies and community engagement. Our goal is to reduce waste, promote recycling, and make our cities cleaner and more sustainable for future generations.
+            </p>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section class="timeline-section">
-        <a id="timeline"></a>
-        <div class="container mb-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 order-lg-2">
-                    <h2 class="text-title mb-4 text-center">Our Story</h2>
-                    <p class="lead">We all realized our shared interest for finance and came together to create a website with the purpose to educate NJ youth about finance.</p>
+    <section class="timeline" id="timeline">
+        <h2>Our Journey</h2>
+        <ul>
+            <li>
+                <div class="timeline-content">
+                    <h3>2018</h3>
+                    <p>EcoSmart was founded with a vision to tackle urban waste challenges using technology.</p>
                 </div>
-                <div class="col-lg-6 col-md-12 order-lg-1 text-center">
-                    <img src="img/books-learning.jpg" alt="About Us Image" class="about-us-image">
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2019</h3>
+                    <p>Launched our first smart waste bins equipped with sensors and data analytics.</p>
                 </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2020</h3>
+                    <p>Expanded our services to include AI-powered recycling programs and community initiatives.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2021</h3>
+                    <p>Partnered with local governments to implement city-wide waste reduction strategies.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2022</h3>
+                    <p>Introduced our user-friendly app for waste tracking and scheduling pickups.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Community Impact Section -->
+    <section class="community-impact" id="community">
+        <h2>Making a Difference Together</h2>
+        <p>EcoSmart is committed to creating positive environmental impacts within our communities.</p>
+        <div class="impact-cards">
+            <div class="impact-card">
+                <i class="fas fa-tree"></i>
+                <h3>Environmental Stewardship</h3>
+                <p>Promoting sustainable practices to protect our planet.</p>
             </div>
-        </div>
-        <div class="mb-5"></div>
-        <div class="container">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">September 24, 2024</div>
-                        <h3>The Beginning</h3>
-                        <p>Three high school students united by their passion for financial literacy founded
-                            MoneyMindsNJ with a vision to educate their peers.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">October 29, 2024</div>
-                        <h3>Building the Website</h3>
-                        <p>These three teens build a website to teach lessons, write blogs, and share news about
-                            finance, all for financial literacy.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024 - Future</div>
-                        <h3>The Future</h3>
-                        <p>Empowering the next generation with financial knowledge and creating lasting positive impact
-                            in our community.</p>
-                    </div>
-                </div>
+            <div class="impact-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Engagement</h3>
+                <p>Empowering individuals to take action and make a difference.</p>
+            </div>
+            <div class="impact-card">
+                <i class="fas fa-recycle"></i>
+                <h3>Innovative Recycling</h3>
+                <p>Implementing cutting-edge solutions to reduce waste.</p>
+            </div>
+            <div class="impact-card">
+                <i class="fas fa-globe-americas"></i>
+                <h3>Global Impact</h3>
+                <p>Contributing to worldwide efforts for a greener future.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="finance-footer p-5 text-center position-relative">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-gold">Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank"
-                                class="footer-link">Financial Calculator</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank"
-                                class="footer-link">Investment Tips</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"
-                                class="footer-link">Budget Planner</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-gold">Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-gold">Newsletter</h4>
-                    <p>Stay updated with our financial tips!</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-gold">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <hr class="footer-divider">
-            <p class="copyright">&copy; 2024 MoneyMindsNJ. All rights reserved.</p>
-        </div>
-        <a href="#" class="scroll-top position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h2 icon-gold"></i>
-        </a>
-        <div class="money-rain"></div>
+    <footer>
+        <p>&copy; 2023 EcoSmart. All rights reserved.</p>
     </footer>
-
 </body>
-
 </html>
