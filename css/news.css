@@ -87,3 +87,14 @@
 .bg-stock {
     padding: 2rem 0;
 }
+
+.news-sec-heading {
+    text-align: start;
+}
+
+@media screen and (max-width: 576px) {
+    .news-sec-heading {
+        text-align: center;
+    }
+    
+}
