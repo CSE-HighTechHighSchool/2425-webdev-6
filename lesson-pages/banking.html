@@ -24,6 +24,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/lesson-page.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="../navbar.js" defer></script>
+</head>
 </head>
 
 <body>
@@ -61,11 +66,40 @@
                     <a href="#" class="btn btn-login">Log In</a>
                 </div>
             </div>
+            <div>
+              <h3 class="m-1">MoneyMindsNJ</h3>
+            </div>
+          </a>
+    
+          <!--Hamburger icon for collapse-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="../lessons.html">Lessons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="../news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="../blog.html">Blog</a>
+              </li>
+            </ul>
+            
+            <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
+            <div class="d-flex ms-auto m-1">
+              <a id="signUpBtn" href="../signUp.html" class="btn btn-signin">Sign Up</a>
+              <a id="loginBtn" href="../logIn.html" class="btn btn-login">Log In</a>
+            </div>
+          </div>
         </div>
-    </nav>
 
-    <!-- Lesson Header -->
-    <header class="lesson-header container py-5 text-center">
+      </nav>
+    
+    <!-- Article Title -->
+    <header class="lesson-header container px-2">
         <h1 class="lesson-title">Introduction to Banking and Savings</h1>
         <div class="meta-info d-flex justify-content-center gap-3 my-3">
             <span><i class="bi bi-person-circle"></i> By: MoneyMindsNJ Staff</span>
