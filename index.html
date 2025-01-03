@@ -31,45 +31,82 @@
 
 </head>
 
-<body>
-    <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
+<body onload="checkUser()">
+    <nav class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-            <!--Icon and title of website-->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <div>
-                    <img src="img/logo.png" alt="Money Minds NJ Logo">
-                </div>
-                <div>
-                    <h3 class="m-1">MoneyMindsNJ</h3>
-                </div>
-            </a>
-
-            <!--Hamburger icon for collapse-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
-                    </li>
-                </ul>
-
-                <!--Sign in and log in buttons-->
-                <div class="d-flex ms-auto m-1">
-                    <a href="signUp.html" class="btn btn-signin">Sign Up</a>
-                    <a href="logIn.html" class="btn btn-login">Log In</a>
-                </div>
+    
+          <!--Icon and title of website-->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div>
+              <img src="img/logo.png" alt="Money Minds NJ Logo">
             </div>
+            <div>
+              <h3 class="m-1">MoneyMindsNJ</h3>
+            </div>
+          </a>
+    
+          <!--Hamburger icon for collapse-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
+              </li>
+            </ul>
+            
+            <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
+            <div class="d-flex ms-auto m-1">
+              <a id="signUpBtn" href="signUp.html" class="btn btn-signin">Sign Up</a>
+              <a id="loginBtn" href="logIn.html" class="btn btn-login">Log In</a>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 
+      <script>
+        function checkUser() {
+          // See if user is in localStorage or sessionStorage
+          let userData = localStorage.getItem("user") || sessionStorage.getItem("user");
+          if (userData) {
+            // Convert string back to object
+            let user = JSON.parse(userData);
+    
+            // Example: user.firstname and user.lastname from your Realtime Database
+            let firstName = user.firstname || "";
+            let lastName  = user.lastname  || "";
+    
+            // Swap out the navbar buttons
+            let signUpBtn = document.getElementById("signUpBtn");
+            let loginBtn  = document.getElementById("loginBtn");
+    
+            // Show the user’s name in place of “Sign Up”
+            signUpBtn.textContent = firstName + " " + lastName;
+            signUpBtn.href = "#"; // Could also link to a profile page, if you have one
+    
+            // Turn the “Log In” button into “Log Out”
+            loginBtn.textContent = "Log Out";
+            loginBtn.href = "#"; // This prevents it from navigating away
+            loginBtn.onclick = function () {
+              // Clear everything from storage
+              localStorage.removeItem("keepLoggedIn");
+              localStorage.removeItem("user");
+              sessionStorage.removeItem("user");
+    
+              // Optionally redirect or refresh
+              window.location.reload();
+            };
+          }
+        }
+      </script>
+      
     <!-- Disclaimer -->
     <div class="text-center">
         This website is for A SCHOOL ASSIGNMENT. It is not a real website.
