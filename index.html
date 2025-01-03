@@ -8,8 +8,9 @@
     <title>MoneyMindsNJ</title>
     <link rel="icon" href="img/logo.png" type="image/png">
 
+    <!-- Bootstrap and Icon Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkkQ2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -18,38 +19,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+    <!-- Global JS -->
     <script src="global.js" defer></script>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Manrope:wght@200..800&display=swap"
         rel="stylesheet">
 
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
-
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-            <!--Icon and title of website-->
+            <!-- Icon and title of website-->
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <div>
-                    <img src="img/logo.png" alt="Money Minds NJ Logo">
-                </div>
-                <div>
-                    <h3 class="m-1">MoneyMindsNJ</h3>
-                </div>
+                <img src="img/logo.png" alt="Money Minds NJ Logo" style="max-height: 50px;">
+                <h3 class="m-1 ms-2">MoneyMindsNJ</h3>
             </a>
 
-            <!--Hamburger icon for collapse-->
+            <!-- Hamburger icon for collapse-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-3">
                     <li class="nav-item">
                         <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
                     </li>
@@ -61,9 +63,9 @@
                     </li>
                 </ul>
 
-                <!--Sign in and log in buttons-->
+                <!-- Sign in and log in buttons -->
                 <div class="d-flex ms-auto m-1">
-                    <a href="#" class="btn btn-signin">Sign Up</a>
+                    <a href="#" class="btn btn-signin me-2">Sign Up</a>
                     <a href="#" class="btn btn-login">Log In</a>
                 </div>
             </div>
@@ -71,17 +73,20 @@
     </nav>
 
     <!-- Disclaimer -->
-    <div class="text-center">
+    <div class="text-center disclaimer-bar">
         This website is for A SCHOOL ASSIGNMENT. It is not a real website.
     </div>
 
-    <!-- Hero Section (New Jersey Money Image and MoneyMindsNJ Island) -->
+    <!-- Hero Section -->
     <main class="hero-section">
         <div class="container">
             <div class="row align-items-center justify-content-center">
+                <!-- Text Content -->
                 <div class="col-lg-6 col-12 hero-content">
                     <h1 class="hero-title mb-4">MoneyMindsNJ</h1>
-                    <p class="hero-tagline mb-5">Empowering financial literacy in New Jersey, one mind at a time.</p>
+                    <p class="hero-tagline mb-5">
+                        Empowering financial literacy in New Jersey, one mind at a time.
+                    </p>
                     <div class="feature-icons d-flex justify-content-between">
                         <a href="lessons.html" class="icon-link-homepage">
                             <div class="icon-wrapper">
@@ -103,6 +108,8 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Hero Image -->
                 <div class="col-lg-6 d-none d-lg-block">
                     <div class="nj-money-shape">
                         <img src="img/newjerseymoney.png" alt="New Jersey Money Shape" class="img-fluid">
@@ -112,37 +119,41 @@
         </div>
     </main>
 
-    <!---- About Us Section -->
+    <!-- About Us Section -->
     <section class="about-us py-5">
         <div class="container">
             <div class="content-wrapper">
                 <div class="about-content">
                     <h2 class="text-title mb-4">About Us</h2>
-                    <p class="lead">Money Minds NJ is dedicated to educating individuals on
-                        financial
-                        literacy and helping them develop essential money management skills. Our mission is to make
-                        financial education accessible, engaging, and practical for everyone.</p>
-                    <p class="lead">Through our lessons, blog, and news updates, we provide
-                        valuable
-                        insights and resources that empower people to take control of their financial future.</p>
+                    <p class="lead">
+                        Money Minds NJ is dedicated to educating individuals on financial literacy and helping them
+                        develop essential money management skills. Our mission is to make financial education
+                        accessible, engaging, and practical for everyone.
+                    </p>
+                    <p class="lead">
+                        Through our lessons, blog, and news updates, we provide valuable insights and resources that
+                        empower people to take control of their financial future.
+                    </p>
                     <div class="button-container" style="margin-top: 2rem;">
                         <a href="#timeline" class="btn btn-gold scroll-link"
-                            style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">Our Story</a>
+                            style="font-size: 1.1rem; padding: 0.75rem 1.5rem;">
+                            Our Story
+                        </a>
                     </div>
                 </div>
 
-                <!-- Team Members Section -->
+                <!-- Team Members -->
                 <div class="team-members">
-                    <!-- Team Member Card Medhansh -->
+                    <!-- Team Member: Medhansh -->
                     <div class="team-member card" onclick="openModal('modalMedhansh')">
                         <div class="img-container">
                             <img src="img/medansh.png" alt="Team Member 1">
                         </div>
-                        <h5 class="mt-3" style=" font-size: 1.1rem;">Medhansh Puri</h5>
+                        <h5 class="mt-3" style="font-size: 1.1rem;">Medhansh Puri</h5>
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
 
-                    <!-- Team Member Card Ayden -->
+                    <!-- Team Member: Ayden -->
                     <div class="team-member card" onclick="openModal('modalAyden')">
                         <div class="img-container d-flex justify-content-center align-items-center">
                             <img src="img/ayden.jpg" alt="Team Member 2">
@@ -151,7 +162,7 @@
                         <p class="text-muted" style="margin: 0;">Co-Founder</p>
                     </div>
 
-                    <!-- Team Member Card Saketh -->
+                    <!-- Team Member: Saketh -->
                     <div class="team-member card" onclick="openModal('modalSaketh')">
                         <div class="img-container">
                             <img src="img/saketh.jpeg" alt="Team Member 3">
@@ -163,14 +174,16 @@
             </div>
         </div>
 
-        <!-- Modals for each team member -->
+        <!-- Modals -->
         <div id="modalMedhansh" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalMedhansh')">&times;</span>
                 <h2>Medhansh Puri</h2>
-                <p>Hello everyone! My name is Medhansh Puri and I am a junior at High Technology High School with a
+                <p>
+                    Hello everyone! My name is Medhansh Puri and I am a junior at High Technology High School with a
                     passion in finance and investments. I also am interested in a variety of other topics such as biking
-                    and watching movies.</p>
+                    and watching movies.
+                </p>
             </div>
         </div>
 
@@ -178,22 +191,24 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalAyden')">&times;</span>
                 <h2>Ayden Pinto</h2>
-                <p>Hey! My name is Ayden Pinto, and I am a Junior at High Technology High School, one of the best STEM
+                <p>
+                    Hey! My name is Ayden Pinto, and I am a Junior at High Technology High School, one of the best STEM
                     schools in the nation. I've created this website with my peers, Saketh and Medhansh, as an extension
                     of my love for finance. I am the Director of Entrepreneurship at my high school. Outside of school,
-                    I love to be outdoors. More specifically, I love to bike and play soccer. I've been playing soccer
-                    since I was three, and I currently play on Manalapan High School's Varsity Soccer team. My team is
-                    ranked number two in the Shore! Overall, I'm a fun-loving, hard-working, and extremely sociable teen
-                    who loves finance and the world of money!</p>
+                    I love to bike and play soccer...
+                </p>
             </div>
         </div>
+
         <div id="modalSaketh" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modalSaketh')">&times;</span>
                 <h2>Saketh Satti</h2>
-                <p>Hello! I'm Saketh Satti, one of the authors of this website. I'm very interesting in Artifical
-                    Intelligence and its applications in a wide range of subjects, especially Large Language Models
-                    (LLMs). I also like biking, listening to music, and watching TV Shows.</p>
+                <p>
+                    Hello! I'm Saketh Satti, one of the authors of this website. I'm very interested in Artificial
+                    Intelligence and its applications, especially Large Language Models (LLMs). I also like biking,
+                    listening to music, and watching TV Shows.
+                </p>
             </div>
         </div>
     </section>
@@ -205,22 +220,29 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12 order-lg-2">
                     <h2 class="text-title mb-4 text-center">Our Story</h2>
-                    <p class="lead">We all realized our shared interest for finance and came together to create a website with the purpose to educate NJ youth about finance.</p>
+                    <p class="lead text-center text-md-start">
+                        We all realized our shared interest for finance and came together to create a website
+                        with the purpose to educate NJ youth about finance.
+                    </p>
                 </div>
                 <div class="col-lg-6 col-md-12 order-lg-1 text-center">
                     <img src="img/books-learning.jpg" alt="About Us Image" class="about-us-image">
                 </div>
             </div>
         </div>
+
         <div class="mb-5"></div>
+
         <div class="container">
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">September 24, 2024</div>
                         <h3>The Beginning</h3>
-                        <p>Three high school students united by their passion for financial literacy founded
-                            MoneyMindsNJ with a vision to educate their peers.</p>
+                        <p>
+                            Three high school students united by their passion for financial literacy founded
+                            MoneyMindsNJ with a vision to educate their peers.
+                        </p>
                     </div>
                 </div>
 
@@ -228,8 +250,10 @@
                     <div class="timeline-content">
                         <div class="timeline-date">October 29, 2024</div>
                         <h3>Building the Website</h3>
-                        <p>These three teens build a website to teach lessons, write blogs, and share news about
-                            finance, all for financial literacy.</p>
+                        <p>
+                            These three teens build a website to teach lessons, write blogs, and share news
+                            about finance, all for financial literacy.
+                        </p>
                     </div>
                 </div>
 
@@ -237,8 +261,10 @@
                     <div class="timeline-content">
                         <div class="timeline-date">2024 - Future</div>
                         <h3>The Future</h3>
-                        <p>Empowering the next generation with financial knowledge and creating lasting positive impact
-                            in our community.</p>
+                        <p>
+                            Empowering the next generation with financial knowledge and creating lasting
+                            positive impact in our community.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -252,27 +278,28 @@
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank"
-                                class="footer-link">Financial Calculator</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank"
-                                class="footer-link">Investment Tips</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"
-                                class="footer-link">Budget Planner</a></li>
+                        <li>
+                            <a href="https://www.calculator.net/finance-calculator.html" target="_blank" class="footer-link">Financial Calculator</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank" class="footer-link">Investment Tips</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank" class="footer-link">Budget Planner</a>
+                        </li>
                     </ul>
                 </div>
+
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold">Connect With Us</h4>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
+
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold">Newsletter</h4>
                     <p>Stay updated with our financial tips!</p>
@@ -282,15 +309,16 @@
                     </form>
                 </div>
             </div>
+
             <hr class="footer-divider">
             <p class="copyright">&copy; 2024 MoneyMindsNJ. All rights reserved.</p>
         </div>
+
         <a href="#" class="scroll-top position-absolute bottom-0 end-0 p-5">
             <i class="bi bi-arrow-up-circle h2 icon-gold"></i>
         </a>
         <div class="money-rain"></div>
     </footer>
-
 </body>
 
 </html>

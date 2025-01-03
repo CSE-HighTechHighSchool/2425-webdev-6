@@ -1,40 +1,37 @@
 /* Consistent styling for all lesson pages */
-
-/* Global CSS variables */
-:root {
-    --primary-color: black;
-    --primary-light: #534bae;
-    --secondary-color: #ffd700;
-    --text-dark: #333;
-    --spacing-unit: 2rem;
-    --transition: all 0.3s ease;
+body {
+    font-family: "Manrope", sans-serif;
+    background: #faf9f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Title, Time Length, and Authors */
 .lesson-header {
-    color: black;
-    padding: 3rem 2rem;
+    background: #fff2db;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
     margin-bottom: 2rem;
 }
 
 .lesson-title {
     font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #624f2f;
 }
 
-/* Middle Section styles (Objectives, Definitions, and Images). */
+.meta-info {
+    font-size: 1rem;
+    color: #555;
+}
+
 .objectives-section {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    padding: 2.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
     margin: 2rem 0;
-    transition: var(--transition);
-}
-
-.objectives-section:hover {
-    transform: translateY(-5px);
 }
 
 .objectives-list {
@@ -42,124 +39,21 @@
     padding: 0;
 }
 
-.objectives-section,
-.lesson-content {
-    animation: fadeIn 0.6s ease-out forwards;
-}
-
 .objectives-list li {
-    margin-bottom: 1.2rem;
-    padding-left: 2rem;
+    margin-bottom: 1rem;
     position: relative;
+    padding-left: 1.5rem;
 }
 
 .objectives-list li::before {
-    content: '✓';
+    content: "✓";
     position: absolute;
     left: 0;
-    color: var(--primary-light);
+    color: #ffd700;
     font-weight: bold;
 }
 
-.lead {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--primary-color);
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 1rem;
-    margin: 2rem 0;
-}
-
-.lesson-content {
-    background: white;
-    border-radius: 12px;
-    padding: 2.5rem;
-    margin: 2rem auto;
-    max-width: 900px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.section-title {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin: 2rem 0 1.5rem;
-    position: relative;
-}
-
-.lesson-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-}
-
-.lesson-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    transition: var(--transition);
-}
-
-.lesson-img:hover {
-    transform: scale(1.02);
-}
-
-/* Slideshow Styles */
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    width: 5vw;
-    height: 5vw;
-    color: black;
-    border-radius: 50%;
-    padding: 1rem 1rem;
-    filter: invert(1);
-    /* This makes the slider icons black, which you cannot do by changing the color */
-}
-
-
-/* Media Queries */
-
-@media (max-width: 768px) {
-    .lesson-header {
-        padding: 2rem 1rem;
-    }
-
-    .lesson-title {
-        font-size: 2rem;
-    }
-
-    .meta-info {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .objectives-section,
-    .lesson-content {
-        padding: 1.5rem;
-        margin: 1rem 0;
-    }
-
-    .lead {
-        font-size: 1.1rem;
-    }
-}
-
-/* 
-    * Keyframes help control the progress of an animation 
-    * The animation will start at 0% Opacity and end at 100% 
-    * It also starts 20px below, and moves up 
-*/
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.carousel .carousel-inner img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

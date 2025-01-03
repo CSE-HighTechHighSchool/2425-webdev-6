@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoneyMindsNJ | Finance Club</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- Bootstrap and Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/financeclub.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
+    <div class="container">
+      <!-- Logo + Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="MoneyMindsNJ Logo" style="max-height: 50px;">
+        <h3 class="m-1 ms-2">MoneyMindsNJ</h3>
+      </a>
+
+      <!-- Hamburger Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-3">
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
+          </li>
+          <!-- (Optional) Add direct nav link:
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation active" href="financeclub.html">Finance Club</a>
+          </li>
+          -->
+        </ul>
+
+        <!-- Sign Up / Log In -->
+        <div class="d-flex ms-auto m-1">
+          <a href="#" class="btn btn-signin me-2">Sign Up</a>
+          <a href="#" class="btn btn-login">Log In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Optional Disclaimer -->
+  <div class="text-center disclaimer-bar">
+    This website is for a school assignment. It is not a real website.
+  </div>
+
+  <!-- Finance Club Hero Section -->
+  <section class="financeclub-hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-overlay"></div>
+    <div class="hero-content animate-fade-in">
+      <h1 class="financeclub-title mb-3">Finance Club</h1>
+      <p class="financeclub-subtitle mb-4">
+        Discover weekly insights, articles, and posters that empower your financial future.
+      </p>
+      <a href="#weekly-articles" class="btn btn-maroon shadow animate-hover-bounce">View Weekly Articles</a>
+    </div>
+  </section>
+
+  <!-- About the Finance Club -->
+  <section class="financeclub-about py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 animate-fade-in-left">
+          <h2 class="mb-3" style="color: var(--maroon)">About Our Club</h2>
+          <p class="lead" style="color: #444;">
+            MoneyMindsNJ Finance Club brings together students passionate about financial literacy, investing, and 
+            personal money management. Each week, we post new articles, resources, and posters to keep our members 
+            and the community informed about the world of finance.
+          </p>
+          <p style="color: #444;">
+            <strong>Our Mission:</strong> Encourage discussions, share insights, and foster a network of peers who 
+            support one another’s financial growth.
+          </p>
+          <a href="#" class="btn btn-outline-maroon mt-3 shadow animate-hover-bounce">Join the Club</a>
+        </div>
+        <div class="col-lg-6 text-center animate-fade-in-right">
+          <img src="img/financeclub/groupdiscussion.jpg" alt="Finance Club Discussion" class="club-hero-image img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Articles / Posters -->
+  <section id="weekly-articles" class="weekly-articles py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: var(--maroon)">Weekly Articles & Posters</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4 animate-fade-up">
+          <div class="club-article-card">
+            <img src="img/SCR-20250103-mise.png" alt="Article Poster 1" class="card-img">
+            <div class="card-content p-3">
+              <h5 class="card-title mb-2">Understanding Budgeting Basics</h5>
+              <p class="card-text mb-3">
+                Learn how to set up a simple budget, track your expenses, and plan for a better financial future.
+              </p>
+              <!-- 'Read More' triggers modal #modalArticle1 -->
+              <button class="btn btn-sm btn-maroon shadow open-modal" data-modal-target="#modalArticle1">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4 animate-fade-up">
+          <div class="club-article-card">
+            <img src="img/financeclub/poster2.jpg" alt="Article Poster 2" class="card-img">
+            <div class="card-content p-3">
+              <h5 class="card-title mb-2">Stocks vs. Bonds</h5>
+              <p class="card-text mb-3">
+                This week’s highlight covers the difference between stocks and bonds, and how each fits into your 
+                investment strategy.
+              </p>
+              <!-- 'Read More' triggers modal #modalArticle2 -->
+              <button class="btn btn-sm btn-maroon shadow open-modal" data-modal-target="#modalArticle2">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4 animate-fade-up">
+          <div class="club-article-card">
+            <img src="img/financeclub/poster3.jpg" alt="Article Poster 3" class="card-img">
+            <div class="card-content p-3">
+              <h5 class="card-title mb-2">How to Start Saving Early</h5>
+              <p class="card-text mb-3">
+                Explore tips for building good habits, opening the right accounts, and planning for the long haul.
+              </p>
+              <!-- 'Read More' triggers modal #modalArticle3 -->
+              <button class="btn btn-sm btn-maroon shadow open-modal" data-modal-target="#modalArticle3">Read More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Add more Cards/Modals as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Card 1 -->
+  <div id="modalArticle1" class="article-modal">
+    <div class="modal-content-article animate-money-slide">
+      <span class="close-modal">&times;</span>
+      <h3 class="mb-3">Budgeting Basics Newsletter</h3>
+      <img src="img/Finance Club Sample Newsletter.png" alt="Newsletter 1" class="img-fluid financeclub-modal-img">
+    </div>
+  </div>
+
+  <!-- Modal for Card 2 -->
+  <div id="modalArticle2" class="article-modal">
+    <div class="modal-content-article animate-money-slide">
+      <span class="close-modal">&times;</span>
+      <h3 class="mb-3">Stocks vs. Bonds</h3>
+      <img src="img/financeclub/newsletter2.jpg" alt="Newsletter 2" class="img-fluid financeclub-modal-img">
+    </div>
+  </div>
+
+  <!-- Modal for Card 3 -->
+  <div id="modalArticle3" class="article-modal">
+    <div class="modal-content-article animate-money-slide">
+      <span class="close-modal">&times;</span>
+      <h3 class="mb-3">How to Start Saving Early</h3>
+      <img src="img/financeclub/newsletter3.jpg" alt="Newsletter 3" class="img-fluid financeclub-modal-img">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="finance-footer p-5 text-center position-relative">
+    <div class="container">
+      <div class="row">
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-gold">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.calculator.net/finance-calculator.html" target="_blank" class="footer-link">
+                Financial Calculator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank" class="footer-link">
+                Investment Tips
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank" class="footer-link">
+                Budget Planner
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Connect With Us -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-gold">Connect With Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com" target="_blank" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Newsletter -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-gold">Newsletter</h4>
+          <p>Stay updated with our financial tips!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-maroon shadow">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+      <p class="mb-0">
+        &copy; 2024 MoneyMindsNJ. All rights reserved.
+      </p>
+    </div>
+    <a href="#" class="scroll-top position-absolute bottom-0 end-0 p-5">
+      <i class="bi bi-arrow-up-circle h2 icon-gold"></i>
+    </a>
+    <div class="money-rain"></div>
+  </footer>
+
+  <!-- Optional JS Script for modals and custom animations -->
+  <script>
+    // Open modal on 'Read More' click
+    document.querySelectorAll('.open-modal').forEach(button => {
+      button.addEventListener('click', function() {
+        const targetModal = document.querySelector(this.dataset.modalTarget);
+        targetModal.classList.add('show');
+      });
+    });
+
+    // Close modal on 'X' click
+    document.querySelectorAll('.close-modal').forEach(closeBtn => {
+      closeBtn.addEventListener('click', function() {
+        const modal = this.closest('.article-modal');
+        modal.classList.remove('show');
+      });
+    });
+
+    // Optional: Close modal when clicking outside of modal content
+    document.querySelectorAll('.article-modal').forEach(modal => {
+      modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('show');
+        }
+      });
+    });
+
+    // Smooth scrolling for anchor links (optional)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

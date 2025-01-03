@@ -2,179 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MoneyMindsNJ | Lessons</title>
-    <link rel="icon" href="img/logo.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoneyMindsNJ | Lessons</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-        
-    <script src="global.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/lessons.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Bootstrap & Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+  
+  <!-- Global JS -->
+  <script src="global.js" defer></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/lessons.css">
 </head>
 
 <body>
-    <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <div>
-                    <img src="img/logo.png" alt="Money Minds NJ Logo">
-                </div>
-                <div>
-                    <h3 class="m-1">MoneyMindsNJ</h3>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
-                    </li>
-                </ul>
-                <div class="d-flex ms-auto m-1">
-                    <a href="#" class="btn btn-signin">Sign Up</a>
-                    <a href="#" class="btn btn-login">Log In</a>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav id="navbar-extra" class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
+    <div class="container">
+      <!-- Logo + Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="Money Minds NJ Logo" style="max-height: 50px;">
+        <h3 class="m-1 ms-2">MoneyMindsNJ</h3>
+      </a>
+
+      <!-- Hamburger Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-3">
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation active" href="lessons.html">Lessons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
+          </li>
+        </ul>
+        
+        <!-- Sign In / Log In -->
+        <div class="d-flex ms-auto m-1">
+          <a href="#" class="btn btn-signin me-2">Sign Up</a>
+          <a href="#" class="btn btn-login">Log In</a>
         </div>
-    </nav>
-    <section class="mb-5 mt-5">
-        <div class="container" style="margin-top: 2rem;">
-            <div class="d-flex justify-content-center text-center align-items-center gap-3 mb-5" style="color: #F3BA2F">
-                <i class="bi bi-mortarboard display-3"></i>
-                <h1 class="display-4 mb-0">My Lessons</h1>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Optional Disclaimer Bar (similar style to index page) -->
+  <div class="text-center disclaimer-bar">
+    This website is for A SCHOOL ASSIGNMENT. It is not a real website.
+  </div>
+
+  <!-- Lessons Section -->
+  <section class="lessons-hero py-5">
+    <div class="container my-5">
+      <div class="d-flex justify-content-center align-items-center gap-3 text-center" style="color: #F3BA2F;">
+        <i class="bi bi-mortarboard display-3"></i>
+        <h1 class="display-4 mb-0 fw-bold">My Lessons</h1>
+      </div>
+
+      <p class="text-center text-muted mt-3 mb-5">
+        Dive into various topics to enhance your financial literacy skills.
+      </p>
+
+      <div class="row g-4 mt-2 justify-content-center">
+        <!-- Savings & Accounts -->
+        <div class="col-md-4">
+          <a href="./lesson-pages/savings-intro.html"
+              class="card h-100 text-decoration-none text-dark hover-shadow">
+            <div class="card-body text-center py-4">
+              <i class="bi bi-piggy-bank display-4 mb-3 text-primary"></i>
+              <h3 class="fw-bold">I. Savings &amp; Accounts</h3>
+              <p class="text-muted mt-2">
+                Learn the fundamentals of saving money and managing different types of accounts.
+              </p>
             </div>
-
-            <div class="row g-4 mt-2 justify-content-center">
-                <div class="col-md-4">
-                    <a href="./lesson-pages/savings-intro.html"
-                        class="card h-100 text-decoration-none text-dark hover-shadow">
-                        <div class="card-body text-center py-4">
-                            <i class="bi bi-piggy-bank display-4 mb-3"></i>
-                            <h3>I. Savings & Accounts</h3>
-                            <p class="text-muted mt-2">Learn the fundamentals of saving money and managing different
-                                types of accounts.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <a href="./lesson-pages/banking.html"
-                        class="card h-100 text-decoration-none text-dark hover-shadow">
-                        <div class="card-body text-center py-4">
-                            <i class="bi bi-bank display-4 mb-3"></i>
-                            <h3>II. Banking Basics</h3>
-                            <p class="text-muted mt-2">Understand how banking works and make informed financial
-                                decisions.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <a href="./lesson-pages/investments.html"
-                        class="card h-100 text-decoration-none text-dark hover-shadow">
-                        <div class="card-body text-center py-4">
-                            <i class="bi bi-graph-up display-4 mb-3"></i>
-                            <h3>III. Investing Basics</h3>
-                            <p class="text-muted mt-2">Start your investment journey with fundamental concepts and
-                                strategies.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="./lesson-pages/financial-future.html"
-                        class="card h-100 text-decoration-none text-dark hover-shadow">
-                        <div class="card-body text-center py-4">
-                            <i class="bi bi-hourglass-split display-4 mb-3"></i>
-                            <h3>IV. Financial Future</h3>
-                            <p class="text-muted mt-2">Learn effective financial planning for financial stability,
-                                reduced stress, and</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="card h-100 text-decoration-none text-dark hover-shadow">
-                        <div class="card-body text-center py-4">
-                            <i class="bi bi-bookmark-plus display-4 mb-3"></i>
-                            <h3>More Coming</h3>
-                            <p class="text-muted mt-2">We will continue to add lesson for you in the future.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+          </a>
         </div>
-    </section>
-    <footer class="finance-footer p-5 text-center position-relative">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-gold">Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.calculator.net/finance-calculator.html" target="_blank"
-                                class="footer-link">Financial Calculator</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank"
-                                class="footer-link">Investment Tips</a></li>
-                        <li><a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank"
-                                class="footer-link">Budget Planner</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-gold">Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i
-                                class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-gold">Newsletter</h4>
-                    <p>Stay updated with our financial tips!</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-gold">Subscribe</button>
-                    </form>
-                </div>
+        <!-- Banking Basics -->
+        <div class="col-md-4">
+          <a href="./lesson-pages/banking.html"
+              class="card h-100 text-decoration-none text-dark hover-shadow">
+            <div class="card-body text-center py-4">
+              <i class="bi bi-bank display-4 mb-3 text-success"></i>
+              <h3 class="fw-bold">II. Banking Basics</h3>
+              <p class="text-muted mt-2">
+                Understand how banking works and make informed financial decisions.
+              </p>
             </div>
-            <hr class="footer-divider">
-            <p class="copyright">&copy; 2024 MoneyMindsNJ. All rights reserved.</p>
+          </a>
         </div>
-        <a href="#" class="scroll-top position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h2 icon-gold"></i>
-        </a>
-        <div class="money-rain"></div>
-    </footer>
+        <!-- Investing Basics -->
+        <div class="col-md-4">
+          <a href="./lesson-pages/investments.html"
+              class="card h-100 text-decoration-none text-dark hover-shadow">
+            <div class="card-body text-center py-4">
+              <i class="bi bi-graph-up display-4 mb-3 text-warning"></i>
+              <h3 class="fw-bold">III. Investing Basics</h3>
+              <p class="text-muted mt-2">
+                Start your investment journey with fundamental concepts and strategies.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- Financial Future -->
+        <div class="col-md-4">
+          <a href="./lesson-pages/financial-future.html"
+              class="card h-100 text-decoration-none text-dark hover-shadow">
+            <div class="card-body text-center py-4">
+              <i class="bi bi-hourglass-split display-4 mb-3 text-info"></i>
+              <h3 class="fw-bold">IV. Financial Future</h3>
+              <p class="text-muted mt-2">
+                Learn effective financial planning for stability and reduced stress.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- More Coming -->
+        <div class="col-md-4">
+          <a href="#" class="card h-100 text-decoration-none text-dark hover-shadow">
+            <div class="card-body text-center py-4">
+              <i class="bi bi-bookmark-plus display-4 mb-3 text-danger"></i>
+              <h3 class="fw-bold">More Coming</h3>
+              <p class="text-muted mt-2">
+                We will continue to add lessons for you in the future.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="finance-footer p-5 text-center position-relative">
+    <div class="container">
+      <div class="row">
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-gold">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.calculator.net/finance-calculator.html" target="_blank" class="footer-link">
+                Financial Calculator
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nerdwallet.com/article/investing/investment-advice" target="_blank" class="footer-link">
+                Investment Tips
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nerdwallet.com/article/finance/budget-worksheet" target="_blank" class="footer-link">
+                Budget Planner
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Connect With Us -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-gold">Connect With Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Newsletter -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-gold">Newsletter</h4>
+          <p>Stay updated with our financial tips!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-gold">Subscribe</button>
+          </form>
+        </div>
+      </div>
 
+      <hr class="footer-divider">
+      <p class="copyright">
+        &copy; 2024 MoneyMindsNJ. All rights reserved.
+      </p>
+    </div>
+    
+    <a href="#" class="scroll-top position-absolute bottom-0 end-0 p-5">
+      <i class="bi bi-arrow-up-circle h2 icon-gold"></i>
+    </a>
+    <div class="money-rain"></div>
+  </footer>
 </body>
-
 </html>

@@ -1,0 +1,326 @@
+/****************************************************
+ * ROOT COLORS & VARIABLES (MAROON & GREY)
+ ****************************************************/
+ :root {
+  --maroon: #800000; /* Adjust to match official high school color */
+  --grey: #444444;   
+  --light-grey: #f3f3f3;
+}
+
+/****************************************************
+ * HERO SECTION
+ ****************************************************/
+.financeclub-hero {
+  position: relative;
+  background: url("../img/financeclub/hero-bg.jpg") center/cover no-repeat;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.financeclub-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 36, 36, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.financeclub-title {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.financeclub-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/****************************************************
+ * GLOBAL BUTTON STYLES (MAROON)
+ ****************************************************/
+.btn-maroon {
+  background-color: var(--maroon);
+  color: #fff;
+  border: 1px solid var(--maroon);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-maroon:hover {
+  background-color: #660000; /* slightly darker maroon */
+  transform: translateY(-2px);
+}
+
+.btn-outline-maroon {
+  background-color: transparent;
+  color: var(--maroon);
+  border: 2px solid var(--maroon);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline-maroon:hover {
+  background-color: var(--maroon);
+  color: #fff;
+}
+
+/****************************************************
+ * ABOUT SECTION
+ ****************************************************/
+.financeclub-about {
+  background-color: #fff;
+  border-top: 5px solid var(--maroon);
+  border-bottom: 5px solid var(--maroon);
+  animation: fadeIn 0.7s ease;
+}
+
+.club-hero-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.club-hero-image:hover {
+  transform: scale(1.02);
+}
+
+/****************************************************
+ * WEEKLY ARTICLES
+ ****************************************************/
+.weekly-articles {
+  background-color: var(--light-grey);
+  border-top: 5px solid var(--maroon);
+  border-bottom: 5px solid var(--maroon);
+  animation: fadeIn 0.7s ease;
+}
+
+.club-article-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.club-article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-title {
+  color: var(--maroon);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/****************************************************
+ * MODAL STYLES
+ ****************************************************/
+.article-modal {
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.article-modal.show {
+  display: flex; /* Show the modal when triggered */
+}
+
+.modal-content-article {
+  background-color: #fff;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--maroon);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.close-modal:hover {
+  color: #660000;
+}
+
+.financeclub-modal-img {
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  max-height: 825px;
+  object-fit: cover;
+}
+
+/****************************************************
+ * ANIMATIONS & KEYFRAMES
+ ****************************************************/
+/* Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In from Left */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+/* Fade In from Right */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+/* Fade In (Hero Content) */
+@keyframes fadeInHero {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInHero 1s ease forwards;
+}
+
+/* Fade Up (for article cards) */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Hover Bounce Effect */
+.animate-hover-bounce {
+  transition: transform 0.2s ease;
+}
+.animate-hover-bounce:hover {
+  transform: scale(1.05);
+}
+
+/* Finance-themed slide in for Modal Content */
+@keyframes moneySlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotate(5deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-5px) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.animate-money-slide {
+  animation: moneySlide 0.6s ease forwards;
+}
+
+/****************************************************
+ * MEDIA QUERIES
+ ****************************************************/
+@media (max-width: 768px) {
+  .financeclub-title {
+    font-size: 2.2rem;
+  }
+  .financeclub-subtitle {
+    font-size: 1rem;
+  }
+  .club-hero-image {
+    max-height: 250px;
+  }
+  .modal-content-article {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .financeclub-subtitle {
+    font-size: 0.95rem;
+  }
+  .financeclub-title {
+    font-size: 2rem;
+  }
+}
