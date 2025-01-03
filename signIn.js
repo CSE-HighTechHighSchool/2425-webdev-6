@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 import {
   getAuth,
   signInWithEmailAndPassword
@@ -15,13 +15,13 @@ import {
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCmjra0giylUmWmG4hcwPmSpAeGB85IVCw",
-    authDomain: "moneymindsnj.firebaseapp.com",
-    databaseURL: "https://moneymindsnj-default-rtdb.firebaseio.com/",
-    projectId: "moneymindsnj",
-    storageBucket: "moneymindsnj.firebasestorage.app",
-    messagingSenderId: "431689123430",
-    appId: "1:431689123430:web:b1fc037358b4f172fe4fa7"
+    apiKey: "AIzaSyAMWBCMtjG_AHjuZD_ne1y1tv64DE49xBA",
+    authDomain: "moneymindsnj-a2e16.firebaseapp.com",
+    databaseURL: "https://moneymindsnj-a2e16-default-rtdb.firebaseio.com/",
+    projectId: "moneymindsnj-a2e16",
+    storageBucket: "moneymindsnj-a2e16.firebasestorage.app",
+    messagingSenderId: "357116733261",
+    appId: "1:357116733261:web:5c01f7abb12e82e2baf904"
 };
 
 
