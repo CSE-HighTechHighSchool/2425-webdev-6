@@ -29,9 +29,11 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 
+    <script src="navbar.js" defer></script>
+
 </head>
 
-<body onload="checkUser()">
+<body>
     <nav class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
     
@@ -71,42 +73,6 @@
         </div>
       </nav>
 
-      <script>
-        function checkUser() {
-          // See if user is in localStorage or sessionStorage
-          let userData = localStorage.getItem("user") || sessionStorage.getItem("user");
-          if (userData) {
-            // Convert string back to object
-            let user = JSON.parse(userData);
-    
-            // Example: user.firstname and user.lastname from your Realtime Database
-            let firstName = user.firstname || "";
-            let lastName  = user.lastname  || "";
-    
-            // Swap out the navbar buttons
-            let signUpBtn = document.getElementById("signUpBtn");
-            let loginBtn  = document.getElementById("loginBtn");
-    
-            // Show the user’s name in place of “Sign Up”
-            signUpBtn.textContent = firstName + " " + lastName;
-            signUpBtn.href = "#"; // Could also link to a profile page, if you have one
-    
-            // Turn the “Log In” button into “Log Out”
-            loginBtn.textContent = "Log Out";
-            loginBtn.href = "#"; // This prevents it from navigating away
-            loginBtn.onclick = function () {
-              // Clear everything from storage
-              localStorage.removeItem("keepLoggedIn");
-              localStorage.removeItem("user");
-              sessionStorage.removeItem("user");
-    
-              // Optionally redirect or refresh
-              window.location.reload();
-            };
-          }
-        }
-      </script>
-      
     <!-- Disclaimer -->
     <div class="text-center">
         This website is for A SCHOOL ASSIGNMENT. It is not a real website.

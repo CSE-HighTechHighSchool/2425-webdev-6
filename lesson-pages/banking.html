@@ -30,42 +30,50 @@
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="../navbar.js" defer></script>
 </head>
 
 <body>
     <!-- Navbar Implementation -->
-    <nav id="navbar-extra" class="navbar p-1 navbar-expand-md navbar-dark nb-background-color sticky-top">
+    <nav class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <div>
-                    <img src="../img/logo.png" alt="Money Minds NJ Logo">
-                </div>
-                <div>
-                    <h3 class="m-1">MoneyMindsNJ</h3>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="../lessons.html">Lessons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="../news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="../blog.html">Blog</a>
-                    </li>
-                </ul>
-                <div class="d-flex ms-auto m-1">
-                    <a href="#" class="btn btn-signin">Sign In</a>
-                    <a href="#" class="btn btn-login">Log In</a>
-                </div>
+    
+          <!--Icon and title of website-->
+          <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <div>
+              <img src="../img/logo.png" alt="Money Minds NJ Logo">
             </div>
+            <div>
+              <h3 class="m-1">MoneyMindsNJ</h3>
+            </div>
+          </a>
+    
+          <!--Hamburger icon for collapse-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="../lessons.html">Lessons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="../news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="../blog.html">Blog</a>
+              </li>
+            </ul>
+            
+            <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
+            <div class="d-flex ms-auto m-1">
+              <a id="signUpBtn" href="../signUp.html" class="btn btn-signin">Sign Up</a>
+              <a id="loginBtn" href="../logIn.html" class="btn btn-login">Log In</a>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
     
     <!-- Article Title -->
     <header class="lesson-header container px-2">
