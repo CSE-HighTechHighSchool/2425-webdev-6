@@ -32,48 +32,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <script src="../navbar.js" defer></script>
+    <script src="lesson-pages.js" defer></script>
 </head>
 
 <body>
     <!-- Navbar Implementation -->
     <nav class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-    
-          <!--Icon and title of website-->
-          <a class="navbar-brand d-flex align-items-center" href="../index.html">
-            <div>
-              <img src="../img/logo.png" alt="Money Minds NJ Logo">
+
+            <!--Icon and title of website-->
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <div>
+                    <img src="../img/logo.png" alt="Money Minds NJ Logo">
+                </div>
+                <div>
+                    <h3 class="m-1">MoneyMindsNJ</h3>
+                </div>
+            </a>
+
+            <!--Hamburger icon for collapse-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="../lessons.html">Lessons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="../news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="../blog.html">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
+                <div class="d-flex ms-auto m-1">
+                    <a id="signUpBtn" href="../signUp.html" class="btn btn-signin">Sign Up</a>
+                    <a id="loginBtn" href="../logIn.html" class="btn btn-login">Log In</a>
+                </div>
             </div>
-            <div>
-              <h3 class="m-1">MoneyMindsNJ</h3>
-            </div>
-          </a>
-    
-          <!--Hamburger icon for collapse-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="../lessons.html">Lessons</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="../news.html">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="../blog.html">Blog</a>
-              </li>
-            </ul>
-            
-            <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
-            <div class="d-flex ms-auto m-1">
-              <a id="signUpBtn" href="../signUp.html" class="btn btn-signin">Sign Up</a>
-              <a id="loginBtn" href="../logIn.html" class="btn btn-login">Log In</a>
-            </div>
-          </div>
         </div>
-      </nav>
+    </nav>
     <!-- Article Title -->
     <header class="lesson-header container px-2">
         <h1 class="lesson-title">Introduction to Personal Finance</h1>
@@ -161,6 +162,98 @@
             </div>
         </section>
     </article>
+    <!-- Quiz Section -->
+    <section class="quiz-section container mb-5 p-4 bg-white rounded shadow">
+        <h2 class="mb-4">Knowledge Check</h2>
+        <form id="quizForm">
+            <div class="question-container mb-4">
+                <h5>1. What is the formula for Simple Interest?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="a" id="q1a">
+                    <label class="form-check-label" for="q1a">a) A = P(1 + rt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="b" id="q1b">
+                    <label class="form-check-label" for="q1b">b) A = P(1 + r/n)^nt</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="c" id="q1c">
+                    <label class="form-check-label" for="q1c">c) A = P + rt</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="d" id="q1d">
+                    <label class="form-check-label" for="q1d">d) A = P(r + t)</label>
+                </div>
+            </div>
+
+            <div class="question-container mb-4">
+                <h5>2. Which of these is NOT mentioned as a benefit of budgeting?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="a" id="q2a">
+                    <label class="form-check-label" for="q2a">a) Controls finances</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="b" id="q2b">
+                    <label class="form-check-label" for="q2b">b) Prevents overspending</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="c" id="q2c">
+                    <label class="form-check-label" for="q2c">c) Guarantees investment returns</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="d" id="q2d">
+                    <label class="form-check-label" for="q2d">d) Helps grow money</label>
+                </div>
+            </div>
+
+            <div class="question-container mb-4">
+                <h5>3. What is a characteristic of Money Market Accounts?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="a" id="q3a">
+                    <label class="form-check-label" for="q3a">a) No minimum balance requirement</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="b" id="q3b">
+                    <label class="form-check-label" for="q3b">b) No check writing access</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="c" id="q3c">
+                    <label class="form-check-label" for="q3c">c) Lower interest rates than savings accounts</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="d" id="q3d">
+                    <label class="form-check-label" for="q3d">d) Higher minimum balance requirements</label>
+                </div>
+            </div>
+
+            <div class="question-container mb-4">
+                <h5>4. According to the lecture, how many recognized currencies exist worldwide?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="a" id="q4a">
+                    <label class="form-check-label" for="q4a">a) 150</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="b" id="q4b">
+                    <label class="form-check-label" for="q4b">b) 160</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="c" id="q4c">
+                    <label class="form-check-label" for="q4c">c) 180</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="d" id="q4d">
+                    <label class="form-check-label" for="q4d">d) 200</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+        </form>
+        <div id="quizResults" class="mt-4 d-none">
+            <h4>Quiz Results</h4>
+            <p>Score: <span id="score">0</span>/4</p>
+            <div id="feedback"></div>
+        </div>
+    </section>
 
     <!-- Footer Implementation -->
     <footer class="finance-footer p-5 text-center position-relative">
