@@ -1,9 +1,9 @@
 /****************************************************
- * ROOT COLORS & VARIABLES (MAROON & GREY)
+ * ROOT COLORS & VARIABLES
  ****************************************************/
  :root {
-  --maroon: #800000; /* Adjust to match official high school color */
-  --grey: #444444;   
+  --maroon: #800000; /* or any official color */
+  --grey: #444444;
   --light-grey: #f3f3f3;
 }
 
@@ -19,11 +19,9 @@
 
 .financeclub-hero .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(36, 36, 36, 0.3);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(36,36,36,0.3);
   z-index: 1;
 }
 
@@ -52,7 +50,7 @@
 }
 
 /****************************************************
- * GLOBAL BUTTON STYLES (MAROON)
+ * GLOBAL BUTTON STYLES
  ****************************************************/
 .btn-maroon {
   background-color: var(--maroon);
@@ -61,7 +59,7 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-maroon:hover {
-  background-color: #660000; /* slightly darker maroon */
+  background-color: #660000;
   transform: translateY(-2px);
 }
 
@@ -88,7 +86,7 @@
 
 .club-hero-image {
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-height: 400px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -111,7 +109,7 @@
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   height: 100%;
   display: flex;
@@ -119,7 +117,7 @@
 }
 .club-article-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .card-img {
@@ -127,6 +125,7 @@
   height: 200px;
   object-fit: cover;
 }
+
 .card-title {
   color: var(--maroon);
   font-size: 1.2rem;
@@ -141,22 +140,20 @@
  * MODAL STYLES
  ****************************************************/
 .article-modal {
-  display: none; /* Hidden by default */
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 9999;
-  left: 0; 
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
   overflow: auto;
   animation: fadeIn 0.4s ease forwards;
 }
 
 .article-modal.show {
-  display: flex; /* Show the modal when triggered */
+  display: flex;
 }
 
 .modal-content-article {
@@ -173,8 +170,7 @@
 
 .close-modal {
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
+  top: 1rem; right: 1.5rem;
   font-size: 2rem;
   color: var(--maroon);
   cursor: pointer;
@@ -206,8 +202,6 @@
     transform: translateY(0);
   }
 }
-
-/* Fade In from Left */
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -218,12 +212,9 @@
     transform: translateX(0);
   }
 }
-
 .animate-fade-in-left {
   animation: fadeInLeft 0.8s ease forwards;
 }
-
-/* Fade In from Right */
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -234,12 +225,9 @@
     transform: translateX(0);
   }
 }
-
 .animate-fade-in-right {
   animation: fadeInRight 0.8s ease forwards;
 }
-
-/* Fade In (Hero Content) */
 @keyframes fadeInHero {
   0% {
     opacity: 0;
@@ -250,12 +238,9 @@
     transform: scale(1);
   }
 }
-
 .animate-fade-in {
   animation: fadeInHero 1s ease forwards;
 }
-
-/* Fade Up (for article cards) */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -266,20 +251,16 @@
     transform: translateY(0);
   }
 }
-
 .animate-fade-up {
   animation: fadeUp 0.9s ease forwards;
 }
-
-/* Hover Bounce Effect */
 .animate-hover-bounce {
   transition: transform 0.2s ease;
 }
 .animate-hover-bounce:hover {
   transform: scale(1.05);
 }
-
-/* Finance-themed slide in for Modal Content */
+/* Modal Slide */
 @keyframes moneySlide {
   0% {
     opacity: 0;
@@ -293,13 +274,37 @@
     transform: translateY(0) rotate(0);
   }
 }
-
 .animate-money-slide {
   animation: moneySlide 0.6s ease forwards;
 }
 
 /****************************************************
- * MEDIA QUERIES
+ * FLOATING COIN (CREATIVE ANIMATION)
+ ****************************************************/
+.floating-coin {
+  position: fixed;
+  bottom: -50px; /* start below viewport */
+  width: 40px;
+  height: 40px;
+  animation: floatCoins 5s linear forwards;
+  z-index: 9999;
+}
+@keyframes floatCoins {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/****************************************************
+ * RESPONSIVE QUERIES
  ****************************************************/
 @media (max-width: 768px) {
   .financeclub-title {

@@ -1,246 +1,189 @@
 /****************************************************
  * GENERAL & BODY STYLES
  ****************************************************/
-
  body {
-    font-family: "Manrope", sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #faf9f7;
-    color: #333;
-  }
-  
-  /* Hide scrollbar (optional aesthetic) */
-  body::-webkit-scrollbar {
-    display: none;
-  }
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #faf9f7;
+  color: #333;
+}
 
-  /****************************************************
-   * HERO / LESSONS SECTION
-   ****************************************************/
-  
+/* Hide scrollbar (optional) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/****************************************************
+ * NAVBAR & DISCLAIMER BAR (UNCHANGED)
+ ****************************************************/
+.nb-background-color {
+  background: linear-gradient(180deg, #fff7e8 0%, #ffeacc 100%);
+  box-shadow: 0 2px 6px rgba(230, 184, 0, 0.2);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 215, 0, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.disclaimer-bar {
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  background: #fff7e8;
+  color: #7e6a3a;
+  border-bottom: 1px solid #ffe5a1;
+}
+
+/****************************************************
+ * NAV-LINKS & BUTTONS (UNCHANGED)
+ ****************************************************/
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #624f2f !important;
+  margin: 0 8px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #caa559 !important;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 2px;
+  background-color: #caa559;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+.btn-signin, .btn-login {
+  background-color: #f5e1b8;
+  border: none;
+  color: #624f2f;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+.btn-signin:hover, .btn-login:hover {
+  background-color: #e6cb8f;
+}
+
+/****************************************************
+ * LESSONS HERO SECTION
+ ****************************************************/
+.lessons-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #fffaf0 100%);
+  min-height: 60vh;
+}
+
+/****************************************************
+ * CARD STYLES
+ ****************************************************/
+.card {
+  background-color: #fff9c4;
+  border-radius: 1rem;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  color: #333;
+}
+.card .bi {
+  transition: transform 0.3s ease;
+}
+.card:hover .bi {
+  transform: scale(1.1);
+}
+
+/****************************************************
+ * FOOTER
+ ****************************************************/
+.finance-footer {
+  background-color: #fff2db;
+  color: #333;
+  border-top: 2px solid #ffdca3;
+  position: relative;
+}
+.text-gold {
+  color: #b48812;
+}
+.footer-link {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #b48812;
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.social-icon {
+  color: #666;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+  color: #b48812;
+  transform: scale(1.1);
+}
+.newsletter-form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.newsletter-form input {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.newsletter-form button {
+  border-radius: 4px;
+}
+.footer-divider {
+  border-top: 1px solid #ffe6b0;
+  margin: 1.5rem 0;
+}
+.scroll-top {
+  color: #d4a017;
+  text-decoration: none;
+}
+.scroll-top:hover {
+  color: #b48812;
+}
+
+/****************************************************
+ * RESPONSIVE
+ ****************************************************/
+@media (max-width: 992px) {
   .lessons-hero {
-    background: linear-gradient(135deg, #fff 0%, #fffaf0 100%);
-    min-height: 60vh;
+    padding: 2rem 0;
   }
-  
-  /****************************************************
-   * CARD STYLES FOR LESSONS
-   ****************************************************/
-  
-  /* Inherited from .card and .hover-shadow in your original code, refined below */
-  .card {
-    background-color: #fff;
-    font-weight: 500;
-    color: #624f2f !important;
-    margin: 0 8px;
-    position: relative;
-    transition: color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .lessons-hero {
+    padding: 2rem 0;
+    min-height: auto;
   }
-  
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link.active {
-    color: #caa559 !important;
+  .display-4 {
+    font-size: 2rem;
   }
-  
-  /* Hover underline effect (same as index) */
-  .hover-underline-animation {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .hover-underline-animation::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 2px;
-    background-color: #caa559;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  
-  .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-  }
-  
-  .btn-signin,
-  .btn-login {
-    background-color: #f5e1b8;
-    border: none;
-    color: #624f2f;
-    font-weight: 600;
-    margin-left: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-signin:hover,
-  .btn-login:hover {
-    background-color: #eff9c4;
-    border-radius: 1rem;
-    border: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
-  }
-  
-  .card h3 {
-    color: #333;
-  }
-  
-  .card .bi {
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover .bi {
-    transform: scale(1.1);
-  }
-  
-  /****************************************************
-   * FOOTER
-   ****************************************************/
-  
-  .finance-footer {
-    background-color: #fff2db;
-    color: #333;
-    border-top: 2px solid #ffdca3;
-    position: relative;
-  }
-  
-  .text-gold {
-    color: #b48812;
-  }
-  
-  .footer-link {
-    text-decoration: none;
-    color: #666;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-link:hover {
-    color: #b48812;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
-  
-  .social-icon {
-    color: #666;
-    font-size: 1.4rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    color: #b48812;
-    transform: scale(1.1);
-  }
-  
-  .newsletter-form {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-    justify-content: center;
-    max-width: 250px;
-    margin: 0 auto;
-  }
-  
-  .newsletter-form input {
-    flex: 1;
-    border: 1px solid #eee;
-    padding: 0.5rem;
-    border-radius: 4px;
-  }
-  
-  .newsletter-form button {
-    border-radius: 4px;
-  }
-  
-  .footer-divider {
-    border-top: 1px solid #ffe6b0;
-    margin: 1.5rem 0;
-  }
-  
-  .scroll-top {
-    color: #d4a017;
-    text-decoration: none;
-  }
-  
-  .scroll-top:hover {
-    color: #b48812;
-  }
-  
-  /****************************************************
-   * OTHER LESSON-RELATED STYLES (FROM ORIGINAL FILE)
-   ****************************************************/
-  
-  .lesson-bar {
-    background-color: #ffed85;
-    width: 100%;
-    padding: 1rem 2rem;
-    margin-top: 2rem;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
-    transition: all 0.3s ease;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .lesson-bar.expanded {
-    border-radius: 2rem 2rem 0rem 0rem;
-  }
-  
-  .curriculum {
-    background-color: #fff9c4;
-    border-radius: 0 0 1rem 1rem;
-    margin-top: -1rem;
-    padding: 2rem 4rem;
-  }
-  
-  .lesson-title-container {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  .curriculum-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 150px;
-  }
-  
-  .more-details {
-    cursor: pointer;
-    text-decoration: underline;
-    text-align: center;
-    margin: 0;
-  }
-  
-  .no-highlight {
-    user-select: none;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .no-highlight:focus {
-    outline: none;
-  }
-  
-  .no-highlight:hover {
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-  }
-  
+}
