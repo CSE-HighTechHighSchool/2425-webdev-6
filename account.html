@@ -34,16 +34,12 @@
   <script src="navbar.js" defer></script>
 
   <!-- Chart.js (CDN) for rendering XP chart -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js" 
-    integrity="sha384-U86Npj6Q4MfUtWyNM/QSw+xFDNO5cKkq+P9O+CMioTEWXhz8hpnMs1Rn54B7dJfi" 
-    crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- Our JS files for profile data & chart -->
-  <!-- Mark them as type="module" so we can import from Firebase -->
   <script src="accountData.js" type="module" defer></script>
   <script src="xpChart.js" type="module" defer></script>
+  <script src="setProfile.js" type="module" defer></script>
+
 </head>
 
 <body>
@@ -99,6 +95,17 @@
           <p><strong>Email:</strong> <span id="userEmail">N/A</span></p>
           <p><strong>Number of Logins:</strong> <span id="loginCount">0</span></p>
           <p><strong>XP Points:</strong> <span id="xpPoints">0</span></p>
+
+          <div class="mt-4 mb-3">
+            <label for="profilePictureInput" class="form-label">Set Profile Picture</label>
+            <input type="file" class="form-control" id="profilePictureInput" accept="image/*">
+            <button class="btn btn-primary mt-2" id="uploadProfilePicture">Upload</button>
+          </div>
+          
+          <!-- Display the user's profile picture if available -->
+          <div class="mt-3">
+            <img id="profilePicture" src="" alt="Profile Picture" style="max-width:150px; border-radius:50%;">
+          </div>
 
           <!-- Chart Container -->
           <div class="mt-5">

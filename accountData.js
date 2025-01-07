@@ -54,6 +54,10 @@ async function loadProfile() {
     if (snapshot.exists()) {
       let stats = snapshot.val();
       // Show stats
+      let photoURL = stats.photoURL || "";
+      if (photoURL) {
+        document.getElementById("profilePicture").src = photoURL;
+      }
       document.getElementById("loginCount").textContent = stats.loginCount ?? 0;
       document.getElementById("xpPoints").textContent = stats.xpPoints ?? 0;
 
