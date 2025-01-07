@@ -14,34 +14,23 @@
   body::-webkit-scrollbar {
     display: none;
   }
-  
+
   /****************************************************
-   * NAVBAR & DISCLAIMER BAR
+   * HERO / LESSONS SECTION
    ****************************************************/
   
-  .nb-background-color {
-    background: linear-gradient(180deg, #fff7e8 0%, #ffeacc 100%);
-    box-shadow: 0 2px 6px rgba(230, 184, 0, 0.2);
-  }
-  
-  /* Make Navbar Toggler icon visible on lighter background */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 215, 0, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-  
-  .disclaimer-bar {
-    padding: 0.5rem;
-    font-size: 0.95rem;
-    background: #fff7e8;
-    color: #7e6a3a;
-    border-bottom: 1px solid #ffe5a1;
+  .lessons-hero {
+    background: linear-gradient(135deg, #fff 0%, #fffaf0 100%);
+    min-height: 60vh;
   }
   
   /****************************************************
-   * NAV-LINKS & BUTTONS
+   * CARD STYLES FOR LESSONS
    ****************************************************/
   
-  .navbar-nav .nav-link {
+  /* Inherited from .card and .hover-shadow in your original code, refined below */
+  .card {
+    background-color: #fff;
     font-weight: 500;
     color: #624f2f !important;
     margin: 0 8px;
@@ -88,25 +77,7 @@
   
   .btn-signin:hover,
   .btn-login:hover {
-    background-color: #e6cb8f;
-  }
-  
-  /****************************************************
-   * HERO / LESSONS SECTION
-   ****************************************************/
-  
-  .lessons-hero {
-    background: linear-gradient(135deg, #fff 0%, #fffaf0 100%);
-    min-height: 60vh;
-  }
-  
-  /****************************************************
-   * CARD STYLES FOR LESSONS
-   ****************************************************/
-  
-  /* Inherited from .card and .hover-shadow in your original code, refined below */
-  .card {
-    background-color: #fff9c4;
+    background-color: #eff9c4;
     border-radius: 1rem;
     border: none;
     transition: all 0.3s ease;
