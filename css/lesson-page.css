@@ -57,3 +57,32 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.quiz-section {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.question-container {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.question-container:last-of-type {
+    border-bottom: none;
+}
+
+.form-check {
+    margin-bottom: 0.5rem;
+}
+
+#quizResults {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+#feedback p {
+    margin-bottom: 0.5rem;
+}
