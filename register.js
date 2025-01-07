@@ -53,6 +53,7 @@ document.getElementById('submitData').onclick = function () {
         password: encryptPassword(password),
         firstname: firstName,
         lastname: lastName,
+        xpPoints: 10,
       })
         .then(() => {
           // Data saved successfully

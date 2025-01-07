@@ -24,7 +24,7 @@ function checkUser() {
       // Turn the "Log In" button into "Log Out"
       if (loginBtn) {
         loginBtn.textContent = "Log Out";
-        loginBtn.href = "#";  // Prevent navigation
+        loginBtn.href = "#"; 
         loginBtn.onclick = function () {
           // Clear everything from storage
           localStorage.removeItem("keepLoggedIn");
