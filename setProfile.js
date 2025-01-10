@@ -49,7 +49,6 @@ window.addEventListener("DOMContentLoaded", () => {
       // 3) Upload to Firebase Storage => "profilePictures/<UID>.jpg"
       let storagePath = `profilePictures/${userUID}.jpg`;
       let fileRef = storageRef(storage, storagePath);
-  
       try {
         await uploadBytes(fileRef, file);
         // 4) Get the download URL 
