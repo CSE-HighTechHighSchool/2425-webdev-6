@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import {
   getAuth,
@@ -46,13 +45,21 @@ document.getElementById('submitData').onclick = function () {
     .then((userCredential) => {
       // Signed up 
       const user = userCredential.user;
-      // ...
+
       set(ref(db, 'users/' + user.uid + "/accountinfo"), {
         uid: user.uid,
         email: email,
         password: encryptPassword(password),
         firstname: firstName,
         lastname: lastName,
+        xpPoints: 10,
+        xpHistory: [
+          { date: "2024-10-01", xp: 10 },
+          { date: "2024-10-02", xp: 30 },
+          { date: "2024-10-03", xp: 65 },
+          { date: "2024-10-05", xp: 115 },
+          { date: "2024-10-10", xp: 185 }
+        ],
       })
         .then(() => {
           // Data saved successfully
@@ -66,7 +73,7 @@ document.getElementById('submitData').onclick = function () {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
+
     });
 
 }

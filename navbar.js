@@ -1,5 +1,6 @@
 // navbar.js
 
+// Check if user is logged in to display username
 function checkUser() {
     // See if user is in localStorage or sessionStorage
     let userData = localStorage.getItem("user") || sessionStorage.getItem("user");
@@ -18,27 +19,27 @@ function checkUser() {
       // Show the user’s name in place of "Sign Up"
       if (signUpBtn) {
         signUpBtn.textContent = firstName + " " + lastName;
-        signUpBtn.href = "#"; // Optionally link to a "Profile" page
+        signUpBtn.href = "account.html";
       }
   
       // Turn the "Log In" button into "Log Out"
       if (loginBtn) {
         loginBtn.textContent = "Log Out";
-        loginBtn.href = "#";  // Prevent navigation
+        loginBtn.href = "#"; 
         loginBtn.onclick = function () {
           // Clear everything from storage
           localStorage.removeItem("keepLoggedIn");
           localStorage.removeItem("user");
           sessionStorage.removeItem("user");
           
-          // Reload page (or redirect) so the navbar updates
+          // Reload page so the navbar updates
           window.location.reload();
         };
       }
     }
   }
   
-  // Optional: run checkUser() automatically when page loads
+  // Run checkUser() automatically when page loads
   document.addEventListener("DOMContentLoaded", function() {
     checkUser();
   });
