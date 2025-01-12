@@ -1,5 +1,6 @@
 // navbar.js
 
+// Check if user is logged in to display username
 function checkUser() {
     // See if user is in localStorage or sessionStorage
     let userData = localStorage.getItem("user") || sessionStorage.getItem("user");
@@ -31,14 +32,14 @@ function checkUser() {
           localStorage.removeItem("user");
           sessionStorage.removeItem("user");
           
-          // Reload page (or redirect) so the navbar updates
+          // Reload page so the navbar updates
           window.location.reload();
         };
       }
     }
   }
   
-  // Optional: run checkUser() automatically when page loads
+  // Run checkUser() automatically when page loads
   document.addEventListener("DOMContentLoaded", function() {
     checkUser();
   });

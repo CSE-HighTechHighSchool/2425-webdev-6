@@ -1,3 +1,4 @@
+// Render chart depicting how user's xp over time
 window.renderXpChart = function (xpHistory) {
   // If you have no data, just skip
   if (!xpHistory || xpHistory.length === 0) {
