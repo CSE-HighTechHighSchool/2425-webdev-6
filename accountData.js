@@ -119,7 +119,7 @@ async function handlePasswordUpdate() {
     // Update the password
     await updatePassword(user, newPassword);
 
-    // Store an encrypted version in your DB
+    // Store an encrypted version in the DB
     let encryptedPw = encryptPassword(newPassword);
     await update(ref(db, `users/${user.uid}/accountinfo`), {
       password: encryptedPw
