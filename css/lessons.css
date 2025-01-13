@@ -1,6 +1,4 @@
-/****************************************************
- * GENERAL & BODY STYLES
- ****************************************************/
+/* GENERAL & BODY STYLES */
  body {
   font-family: "Manrope", sans-serif;
   margin: 0;
@@ -14,17 +12,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/****************************************************
- * LESSONS HERO SECTION
- ****************************************************/
+/* LESSONS HERO SECTION */
 .lessons-hero {
   background: linear-gradient(135deg, #ffffff 0%, #fffaf0 100%);
   min-height: 60vh;
 }
 
-/****************************************************
- * CARD STYLES
- ****************************************************/
+/* CARD STYLES */
 .card {
   background-color: #fff9c4;
   border-radius: 1rem;
@@ -46,9 +40,7 @@ body::-webkit-scrollbar {
   transform: scale(1.1);
 }
 
-/****************************************************
- * FOOTER
- ****************************************************/
+/* FOOTER */
 .finance-footer {
   background-color: #fff2db;
   color: #333;
@@ -110,9 +102,7 @@ body::-webkit-scrollbar {
   color: #b48812;
 }
 
-/****************************************************
- * RESPONSIVE
- ****************************************************/
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .lessons-hero {
     padding: 2rem 0;

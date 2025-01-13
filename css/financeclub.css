@@ -1,15 +1,11 @@
-/****************************************************
- * ROOT COLORS & VARIABLES
- ****************************************************/
+/* Root Colors and Variables */
  :root {
   --maroon: #800000; /* or any official color */
   --grey: #444444;
   --light-grey: #f3f3f3;
 }
 
-/****************************************************
- * HERO SECTION
- ****************************************************/
+/* Hero Section */
 .financeclub-hero {
   position: relative;
   background: url("../img/financeclub/hero-bg.jpg") center/cover no-repeat;
@@ -49,9 +45,7 @@
   margin: 0 auto 2rem auto;
 }
 
-/****************************************************
- * GLOBAL BUTTON STYLES
- ****************************************************/
+/* Button Styles */
 .btn-maroon {
   background-color: var(--maroon);
   color: #fff;
@@ -74,9 +68,7 @@
   color: #fff;
 }
 
-/****************************************************
- * ABOUT SECTION
- ****************************************************/
+/* About Section */
 .financeclub-about {
   background-color: #fff;
   border-top: 5px solid var(--maroon);
@@ -95,9 +87,7 @@
   transform: scale(1.02);
 }
 
-/****************************************************
- * WEEKLY ARTICLES
- ****************************************************/
+/* Weekly Section */
 .weekly-articles {
   background-color: var(--light-grey);
   border-top: 5px solid var(--maroon);
@@ -136,9 +126,7 @@
   color: #555;
 }
 
-/****************************************************
- * MODAL STYLES
- ****************************************************/
+/* Modal Section */
 .article-modal {
   display: none;
   justify-content: center;
@@ -188,9 +176,7 @@
   object-fit: cover;
 }
 
-/****************************************************
- * ANIMATIONS & KEYFRAMES
- ****************************************************/
+/* Animations & Keyframes */
 /* Fade In */
 @keyframes fadeIn {
   0% {
@@ -278,9 +264,7 @@
   animation: moneySlide 0.6s ease forwards;
 }
 
-/****************************************************
- * FLOATING COIN (CREATIVE ANIMATION)
- ****************************************************/
+/* FLOATING COIN (CREATIVE ANIMATION) */
 .floating-coin {
   position: fixed;
   bottom: -50px; /* start below viewport */
@@ -303,9 +287,8 @@
   }
 }
 
-/****************************************************
- * RESPONSIVE QUERIES
- ****************************************************/
+/* Responsive Media Queries */
+
 @media (max-width: 768px) {
   .financeclub-title {
     font-size: 2.2rem;
