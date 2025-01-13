@@ -1,20 +1,4 @@
 /****************************************************
- * GENERAL & RESET STYLES
- ****************************************************/
-
-/* Hide scrollbar (optional aesthetic choice) */
-body::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Manrope", sans-serif;
-    background: #faf9f7;
-    color: #333;
-}
-/****************************************************
  * NJ MONEY IMAGE
  ****************************************************/
 
