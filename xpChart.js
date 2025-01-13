@@ -6,9 +6,8 @@ window.renderXpChart = function (xpHistory) {
     return;
   }
 
-  // Build arrays for labels & data
-  let labels = xpHistory.map(item => item.date);
-  let xpData = xpHistory.map(item => item.xp);
+  let labels = Object.keys(xpHistory); // Get the dates (keys)
+  let xpData = Object.values(xpHistory); // Get the XP values (values)
 
   // Debug
   console.log("Labels:", labels);

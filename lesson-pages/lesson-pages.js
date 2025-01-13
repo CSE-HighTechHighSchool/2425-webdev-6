@@ -198,24 +198,29 @@ document.addEventListener("DOMContentLoaded", () => {
     async function calculateResults() {
         const userAnswers = Array.from(quizContainer.querySelectorAll("input:checked"));
         let score = 0;
-
+    
         userAnswers.forEach((answer, index) => {
             if (parseInt(answer.value) === quizQuestions[index].correctAnswer) {
                 score++;
             }
         });
-
+    
         const xpEarned = score * 10;
-
-        // Update the user's XP in the database
+    
+        // Update the user's XP in the database and log the history
         try {
-            const xpRef = ref(db, `users/${user.uid}/accountinfo/xpPoints`); // Update path to `xpPoints`
+            let date = new Date().toISOString().split("T")[0];
+            const xpRef = ref(db, `users/${user.uid}/accountinfo/xpPoints`);
+            const xpHistoryRef = ref(db, `users/${user.uid}/accountinfo/xpHistory/${date}`);
             const currentXpSnapshot = await get(xpRef);
             const currentXp = currentXpSnapshot.exists() ? currentXpSnapshot.val() : 0;
             const newXp = currentXp + xpEarned;
-
+    
+            // Update total XP
             await set(xpRef, newXp);
 
+            await set(xpHistoryRef, newXp);
+    
             resultsContainer.innerHTML = `
                 <h4>Your Score: ${score} / ${quizQuestions.length}</h4>
                 <p>XP Earned: ${xpEarned}</p>
@@ -230,6 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
     }
+    
 
     submitButton.addEventListener("click", calculateResults);
 

@@ -41,6 +41,8 @@ document.getElementById('submitData').onclick = function () {
     return;
   }
 
+  let date = new Date().toISOString().split("T")[0];
+
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed up 
@@ -53,7 +55,7 @@ document.getElementById('submitData').onclick = function () {
         firstname: firstName,
         lastname: lastName,
         xpPoints: 0,
-        xpHistory: [],
+        xpHistory: { [date]: 0 },
       })
         .then(() => {
           // Data saved successfully
