@@ -476,45 +476,7 @@ nav {
     color: #b48812;
 }
 
-/* Money Rain Animation */
-.money-rain {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    right: 0;
-    height: 100%;
-    pointer-events: none;
-}
 
-.money-rain::before {
-    content: '$';
-    color: rgb(255, 218, 9);
-    font-size: 40px;
-    position: absolute;
-    animation: rain 4s linear infinite;
-}
-@keyframes rain {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(calc(100vh + 100px)) rotate(720deg);
-        opacity: 0;
-    }
-}
-
-/* Generate multiple raindrops */
-@for $i from 1 through 5 {
-    .money-rain::before:nth-child(#{$i}) {
-        left: #{random(100)}%;
-        animation-delay: #{random(300)}ms;
-        animation-duration: #{300 + random(300)}ms;
-    }
-}
 
 /* Set consistent image size for responsive scaling */
 .responsive-image {

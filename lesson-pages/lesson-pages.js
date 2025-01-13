@@ -1,3 +1,32 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+import {
+  get,
+  getDatabase,
+  ref,
+  set
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAMWBCMtjG_AHjuZD_ne1y1tv64DE49xBA",
+  authDomain: "moneymindsnj-a2e16.firebaseapp.com",
+  databaseURL: "https://moneymindsnj-a2e16-default-rtdb.firebaseio.com/",
+  projectId: "moneymindsnj-a2e16",
+  storageBucket: "moneymindsnj-a2e16.firebasestorage.app",
+  messagingSenderId: "357116733261",
+  appId: "1:357116733261:web:5c01f7abb12e82e2baf904"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getDatabase(app);
+
 document.addEventListener("DOMContentLoaded", () => {
     const quizzes = {
         class1: [
@@ -129,6 +158,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.querySelector("#results");
     const submitButton = document.querySelector("#submit-btn");
 
+    // Check if the user is signed in
+    const user = JSON.parse(localStorage.getItem("user") || sessionStorage.getItem("user"));
+    if (!user) {
+        quizContainer.innerHTML = `<p>Please sign in to access the quiz.</p>`;
+        submitButton.style.display = "none"; // Hide the submit button
+        return;
+    }
+
+    // Get the quiz ID
     const quizId = quizContainer.getAttribute("data-quiz-id");
     const quizQuestions = quizzes[quizId];
 
@@ -157,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
         quizContainer.innerHTML = quizContent;
     }
 
-    function calculateResults() {
+    async function calculateResults() {
         const userAnswers = Array.from(quizContainer.querySelectorAll("input:checked"));
         let score = 0;
 
@@ -167,9 +205,30 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        resultsContainer.innerHTML = `
-            <h4>Your Score: ${score} / ${quizQuestions.length}</h4>
-        `;
+        const xpEarned = score * 10;
+
+        // Update the user's XP in the database
+        try {
+            const xpRef = ref(db, `users/${user.uid}/accountinfo/xpPoints`); // Update path to `xpPoints`
+            const currentXpSnapshot = await get(xpRef);
+            const currentXp = currentXpSnapshot.exists() ? currentXpSnapshot.val() : 0;
+            const newXp = currentXp + xpEarned;
+
+            await set(xpRef, newXp);
+
+            resultsContainer.innerHTML = `
+                <h4>Your Score: ${score} / ${quizQuestions.length}</h4>
+                <p>XP Earned: ${xpEarned}</p>
+                <p>Total XP: ${newXp}</p>
+            `;
+        } catch (error) {
+            console.error("Error updating XP:", error);
+            resultsContainer.innerHTML = `
+                <h4>Your Score: ${score} / ${quizQuestions.length}</h4>
+                <p>XP Earned: ${xpEarned}</p>
+                <p>Error updating XP. Please try again later.</p>
+            `;
+        }
     }
 
     submitButton.addEventListener("click", calculateResults);

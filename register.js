@@ -52,14 +52,8 @@ document.getElementById('submitData').onclick = function () {
         password: encryptPassword(password),
         firstname: firstName,
         lastname: lastName,
-        xpPoints: 10,
-        xpHistory: [
-          { date: "2024-10-01", xp: 10 },
-          { date: "2024-10-02", xp: 30 },
-          { date: "2024-10-03", xp: 65 },
-          { date: "2024-10-05", xp: 115 },
-          { date: "2024-10-10", xp: 185 }
-        ],
+        xpPoints: 0,
+        xpHistory: [],
       })
         .then(() => {
           // Data saved successfully
