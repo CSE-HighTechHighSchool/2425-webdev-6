@@ -19,7 +19,7 @@ function checkUser() {
       // Show the user’s name in place of "Sign Up"
       if (signUpBtn) {
         signUpBtn.textContent = firstName + " " + lastName;
-        signUpBtn.href = "account.html";
+        signUpBtn.href = "/2425-webdev-6/account.html";
       }
   
       // Turn the "Log In" button into "Log Out"
