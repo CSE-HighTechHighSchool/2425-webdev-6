@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>MoneyMindsNJ | Blog</title>
     <link rel="icon" href="img/logo.png" type="image/png">
 
@@ -40,49 +40,51 @@
 </head>
 
 <body>
-    <!-- Div Needed for Animation -->
-    <div class="reading-progress"></div>
-
     <nav class="navbar p-1 navbar-expand-md nb-background-color sticky-top">
         <div class="container">
-    
-          <!--Icon and title of website-->
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <div>
-              <img src="img/logo.png" alt="Money Minds NJ Logo">
-            </div>
-            <div>
-              <h3 class="m-1">MoneyMindsNJ</h3>
-            </div>
-          </a>
-    
-          <!--Hamburger icon for collapse-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="news.html">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
-              </li>
-            </ul>
-            
-            <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
-            <div class="d-flex ms-auto m-1">
-              <a id="signUpBtn" href="signUp.html" class="btn btn-signin">Sign Up</a>
-              <a id="loginBtn" href="logIn.html" class="btn btn-login">Log In</a>
-            </div>
-          </div>
-        </div>
-      </nav>
 
-    <div class="reading-progress"></div>
+            <!--Icon and title of website-->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div>
+                    <img src="img/logo.png" alt="Money Minds NJ Logo">
+                </div>
+                <div>
+                    <h3 class="m-1">MoneyMindsNJ</h3>
+                </div>
+            </a>
+
+            <!--Hamburger icon for collapse-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="lessons.html">Lessons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- Buttons to show either "Sign Up"/"Log In" or the user's name/log out -->
+                <!-- Sign in and log in buttons -->
+                <div class="d-flex ms-auto m-1">
+                    <a href="signUp.html" class="btn btn-signin me-2" id="signUpBtn">Sign Up</a>
+                    <a href="logIn.html" class="btn btn-login" id="loginBtn">Log In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Optional Disclaimer Bar (similar style) -->
+    <div class="text-center disclaimer-bar">
+        This website is for A SCHOOL ASSIGNMENT. It is not a real website.
+    </div>
+
 
     <!-- Page Header -->
     <header class="d-flex justify-content-center text-center align-items-center gap-3 mt-5 mb-5" style="color: #F3BA2F">
@@ -258,8 +260,7 @@
                         <div class="modal-body">
                             <!-- Article 2 Content -->
                             <h2>Global Supply Chain Crisis Hinders Economic Recovery</h2>
-                            <img src="img/supply-chain.jpg"
-                                alt="Global Supply Chain Crisis"
+                            <img src="img/supply-chain.jpg" alt="Global Supply Chain Crisis"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>The global <strong>supply chain crisis</strong> is the greatest hindrance to economic
                                 recovery, with disruptions now being felt across the world. Component shortages,
@@ -377,8 +378,7 @@
                         </div>
                         <div class="modal-body">
                             <h2>Cryptocurrency Volatility in 2023: What Investors Need to Know</h2>
-                            <img src="img/crypto.jpg"
-                                alt="Cryptocurrency Market Volatility"
+                            <img src="img/crypto.jpg" alt="Cryptocurrency Market Volatility"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>The year 2023 has been marked by strong volatility in the <strong>cryptocurrency
                                     market</strong>, with top digital assets like <strong>Bitcoin</strong> and
@@ -479,8 +479,8 @@
                             of oil, natural gas, and coal have had financial consequences for businesses and
                             consumers...</p>
                     </div>
-                    <button class="keep-reading-btn btn" data-bs-toggle="modal"
-                        data-bs-target="#articleModal4">Keep Reading <i class="bi bi-arrow-right"></i></button>
+                    <button class="keep-reading-btn btn" data-bs-toggle="modal" data-bs-target="#articleModal4">Keep
+                        Reading <i class="bi bi-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -495,8 +495,7 @@
                         </div>
                         <div class="modal-body">
                             <h2>The Global Energy Crisis: Impact on Markets and the Economy</h2>
-                            <img src="img/gas-station.jpg"
-                                alt="High Gas Prices Displayed at a Gas Station"
+                            <img src="img/gas-station.jpg" alt="High Gas Prices Displayed at a Gas Station"
                                 style="width:100%; border-radius:8px; margin-bottom:20px;">
                             <p>The global <strong>energy crisis</strong> has continued to deteriorate, taking many
                                 markets by storm. Increasing prices of oil, natural gas, and coal have had financial
@@ -592,7 +591,7 @@
                         </div>
                     </div>
                 </div>
-            </div>     
+            </div>
         </div>
     </main>
 

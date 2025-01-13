@@ -88,6 +88,12 @@ body {
     margin-right: 10px;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #000;
+    padding: 1rem, 1rem;
+    border-radius: 1rem;
+}
+
 #results {
     font-weight: bold;
     padding: 1rem;
