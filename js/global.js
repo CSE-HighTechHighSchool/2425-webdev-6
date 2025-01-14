@@ -1,3 +1,4 @@
+// global.js
 
 // JS for the navbar.
 // Everytime you scroll below a certain amount, a shadow is added to the navbar.
