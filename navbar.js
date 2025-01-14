@@ -11,6 +11,8 @@ function checkUser() {
       // Example: user.firstname and user.lastname from your database
       let firstName = user.firstname || "";
       let lastName  = user.lastname  || "";
+
+      let full_name = firstName + " " + lastName;
   
       // Swap out the navbar buttons
       let signUpBtn = document.getElementById("signUpBtn");
@@ -18,7 +20,7 @@ function checkUser() {
   
       // Show the user’s name in place of "Sign Up"
       if (signUpBtn) {
-        signUpBtn.textContent = firstName + " " + lastName;
+        signUpBtn.textContent = full_name.substring(0, 5);;
         signUpBtn.href = "/2425-webdev-6/account.html";
       }
   

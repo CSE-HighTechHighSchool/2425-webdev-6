@@ -6,12 +6,14 @@ window.renderXpChart = function (xpHistory) {
     return;
   }
 
-  let labels = Object.keys(xpHistory); // Get the dates (keys)
+  let labels = Object.keys(xpHistory);
+  let display_labels = labels.map(date => {
+    let [year, month, day] = date.split("-");
+    return `${month}-${day}`;
+  }); // Get the dates (keys)
   let xpData = Object.values(xpHistory); // Get the XP values (values)
 
-  // Debug
-  console.log("Labels:", labels);
-  console.log("XP Data:", xpData);
+  populateDateSelect(labels);
 
   // Get the canvas element
   let ctx = document.getElementById("xpChart").getContext("2d");
@@ -20,7 +22,7 @@ window.renderXpChart = function (xpHistory) {
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: labels,
+      labels: display_labels,
       datasets: [{
         label: 'XP Over Time',
         data: xpData,
@@ -32,10 +34,44 @@ window.renderXpChart = function (xpHistory) {
     },
     options: {
       scales: {
-        y: {
-          beginAtZero: true
+        x: {
+          beginAtZero: true,
+          ticks: {
+            maxTicksLimit: 5
+          }
         }
       }
     }
   });
 };
+
+
+function populateDateSelect(dates) {
+  const select = document.getElementById('xpDateSelect');
+  // Clear existing options except the first one
+  select.innerHTML = '<option value="">Select a date</option>';
+
+  // Add dates to select
+  dates.forEach(date => {
+    const option = document.createElement('option');
+    option.value = date;
+    option.textContent = date;
+    select.appendChild(option);
+  });
+
+  // Add change event listener
+  select.addEventListener('change', handleDateSelection);
+}
+
+function handleDateSelection(event) {
+  const date = event.target.value;
+  const resultDiv = document.getElementById('xpResult');
+
+  if (!date) {
+    resultDiv.textContent = '';
+    return;
+  }
+
+  const xpAmount = window.xpHistory[date];
+  resultDiv.innerHTML = `<strong>XP on ${date}:</strong> ${xpAmount}`;
+}

@@ -34,6 +34,11 @@ window.addEventListener("DOMContentLoaded", () => {
   if (updateBtn) {
     updateBtn.addEventListener("click", handlePasswordUpdate);
   }
+
+  const xpDateSubmit = document.getElementById("xpDateSubmit");
+  if (xpDateSubmit) {
+    xpDateSubmit.addEventListener("click", findXPByDate);
+  }
 });
 
 async function loadProfile() {
@@ -134,7 +139,45 @@ async function handlePasswordUpdate() {
   }
 }
 
+// -------------- Find XP by Date --------------
+async function findXPByDate() {
+  const selectedDate = document.getElementById("xpDateSelect").value;
+  const resultDiv = document.getElementById("xpResult");
+  
+  if (!selectedDate) {
+    resultDiv.textContent = "Please select a date";
+    return;
+  }
+
+  // Get current user data
+  let userDataStr = localStorage.getItem("user") || sessionStorage.getItem("user");
+  if (!userDataStr) {
+    resultDiv.textContent = "Please log in to view XP data";
+    return;
+  }
+
+  let userData = JSON.parse(userDataStr);
+  
+  try {
+    // Get specific date's XP data from Firebase
+    const xpRef = ref(db, `users/${userData.uid}/accountinfo/xpHistory/${selectedDate}`);
+    const snapshot = await get(xpRef);
+    
+    if (snapshot.exists()) {
+      const xpAmount = snapshot.val();
+      resultDiv.innerHTML = `<strong>XP on ${selectedDate}:</strong> ${xpAmount}`;
+    } else {
+      resultDiv.textContent = "No XP data found for this date";
+    }
+  } catch (error) {
+    console.error("Error retrieving XP data:", error);
+    resultDiv.textContent = "Error retrieving XP data";
+  }
+}
+
+// -------------- Encrypt Password --------------
 function encryptPassword(password) {
   let encrypted = CryptoJS.AES.encrypt(password, password);
   return encrypted.toString();
 }
+

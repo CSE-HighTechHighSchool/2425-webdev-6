@@ -394,7 +394,7 @@
     }
 
     .timeline::after {
-        left: 8px;
+        left: 0px;
     }
 
     .timeline-item:nth-child(even) {
